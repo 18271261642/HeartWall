@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp266"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp266"
+        android:layout_height="@dimen/dp266"
+        android:layout_alignParentRight="true"
+        android:elevation="@dimen/dp10"
+        android:background="@color/black_80"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_data_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp40"
+            android:background="@color/white_35"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:nextFocusDown="@id/ll_data_sort"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10">
+
+            <ImageView
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp50"
+                android:src="@mipmap/icon_data_main" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:text="显示主数据"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_data_sort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:nextFocusUp="@id/ll_data_main"
+            android:nextFocusDown="@id/iv_close"
+            android:layout_marginTop="@dimen/dp10"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10">
+
+            <ImageView
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp50"
+                android:src="@mipmap/icon_data_sort" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:text="排序设置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_data_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:nextFocusUp="@id/ll_data_sort"
+            android:nextFocusDown="@id/iv_close"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10">
+
+            <ImageView
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp100"
+                android:src="@mipmap/icon_data_select" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp3"
+                android:text="人员筛选显示"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp30" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:layout_gravity="center_horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="@dimen/dp40"
+            android:nextFocusUp="@id/ll_data_sort"
+            android:nextFocusDown="@id/ll_data_main"
+            android:src="@mipmap/icon_close_unselected" />
+    </LinearLayout>
+</RelativeLayout>

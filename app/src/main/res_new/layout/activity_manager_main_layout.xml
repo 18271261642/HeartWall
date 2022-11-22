@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_setting_manager"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tv_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/shape_manage_bg_unselecte_bg"
+        android:focusable="true"
+        android:nextFocusDown="@id/tv_unregister"
+        android:orientation="vertical"
+        android:padding="@dimen/dp6">
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_back" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp10"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/bg_club_info" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_manager_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selected_layout"
+                android:descendantFocusability="beforeDescendants"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_device_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/device_at"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp27"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_club_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:text="注册门店：中航3店"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp27"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_unregister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:background="@drawable/shape_btn_selected_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:nextFocusLeft="@id/tv_exit"
+                    android:nextFocusRight="@id/layout_update"
+                    android:nextFocusUp="@id/tv_exit"
+                    android:nextFocusDown="@id/tv_exit"
+                    android:padding="@dimen/sp10"
+                    android:text="注销设备"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_version"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/dp5"
+                android:layout_weight="1"
+                android:background="@drawable/shape_manage_bg_unselecte_bg"
+                android:descendantFocusability="beforeDescendants"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/bg_version" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp5">
+
+                    <TextView
+                        android:id="@+id/tv_version_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp15"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp27"
+                        android:textStyle="bold"
+                        tools:text="当前版本：V2.0.6" />
+
+                    <TextView
+                        android:id="@+id/layout_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/shape_btn_unselected_bg"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:nextFocusLeft="@id/tv_unregister"
+                        android:nextFocusRight="@id/tv_unregister"
+                        android:nextFocusUp="@id/tv_exit"
+                        android:nextFocusDown="@id/layout_clear_cache"
+                        android:padding="@dimen/sp15"
+                        android:text="@string/option_cheak_upgrade"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp10"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_clear"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_weight="1"
+                android:background="@drawable/shape_manage_bg_unselecte_bg"
+                android:descendantFocusability="beforeDescendants"
+
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/bg_clear" />
+
+
+                <TextView
+                    android:id="@+id/layout_clear_cache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/shape_btn_unselected_bg"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/tv_unregister"
+                    android:nextFocusRight="@id/tv_unregister"
+                    android:nextFocusUp="@id/layout_update"
+                    android:nextFocusDown="@id/tv_exit"
+                    android:padding="@dimen/dp10"
+                    android:text="清除缓存"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

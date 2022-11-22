@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp220"
+    android:layout_height="@dimen/dp220"
+    android:background="@drawable/shape_man_select_white_bg"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.jkcq.hrwtv.wu.newversion.view.CircleImageView
+        android:id="@+id/roundimg_head"
+        android:layout_width="@dimen/ncard4_head_with"
+        android:layout_height="@dimen/ncard4_head_with"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp20"
+        android:src="@mipmap/icon_default_head"
+        app:civ_border_color="#8E8E93"
+        app:civ_border_width="@dimen/dp5" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/roundimg_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp40"
+        android:singleLine="true"
+        android:text="无健康不传奇"
+        android:textSize="@dimen/sp12" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_man_select_red_bg"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp1"
+        android:paddingBottom="@dimen/dp1"
+        android:text="已隐藏"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp10" />
+</RelativeLayout>

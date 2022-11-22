@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/bind_device"
+        android:textColor="@color/black_text"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/tv_club"
+            android:padding="10dp"
+            android:text="@string/select_brand"
+            android:textColor="@color/black_text"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/spinner_brand"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_toRightOf="@id/tv_brand"
+            android:layout_alignTop="@id/tv_brand"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusDown="@id/spinner_club"
+            android:spinnerMode="dropdown"></Spinner>
+
+        <TextView
+            android:id="@+id/tv_club"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_brand"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:text="@string/select_club"
+            android:textColor="@color/black_text"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/spinner_club"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_club"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/tv_club"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusUp="@id/spinner_brand"
+            android:nextFocusDown="@id/spinner_classroom"
+            android:spinnerMode="dropdown"></Spinner>
+
+        <TextView
+            android:id="@+id/tv_classroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_club"
+            android:layout_alignRight="@id/tv_club"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:text="@string/select_classroom"
+            android:textColor="@color/black_text"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/spinner_classroom"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/spinner_club"
+            android:layout_alignTop="@id/tv_classroom"
+            android:layout_toRightOf="@id/tv_classroom"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusDown="@id/btn_cancel"
+            android:spinnerMode="dropdown"></Spinner>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="@dimen/dp160"
+            android:layout_height="@dimen/dp60"
+            android:background="@drawable/shape_btn_unselected_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusRight="@id/btn_bind"
+            android:nextFocusUp="@id/spinner_classroom"
+            android:nextFocusDown="@id/spinner_club"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp26" />
+
+        <Button
+            android:id="@+id/btn_bind"
+            android:layout_width="@dimen/dp160"
+            android:layout_height="@dimen/dp60"
+            android:layout_marginLeft="@dimen/dp20"
+            android:background="@drawable/shape_btn_unselected_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusLeft="@id/btn_cancel"
+            android:nextFocusUp="@id/spinner_classroom"
+            android:nextFocusDown="@id/spinner_club"
+            android:text="注册"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp26" />
+
+    </LinearLayout>
+</LinearLayout>

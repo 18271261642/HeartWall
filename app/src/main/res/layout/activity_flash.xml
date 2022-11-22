@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_splash"
+    android:orientation="vertical"
+    android:padding="@dimen/dp15"
+    tools:context=".wu.FlashActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp15"
+        android:padding="@dimen/dp5">
+
+        <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp45"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_btn_unselected_bg"
+            android:gravity="center"
+            android:nextFocusRight="@id/layout_setting"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_21"
+            tools:text="13:00" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp45"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_toRightOf="@+id/tv_time"
+            android:background="@drawable/shape_btn_unselected_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:text="深圳松岗满京华店"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_setting"
+            android:layout_width="@dimen/dp45"
+            android:layout_height="@dimen/dp45"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_btn_unselected_bg"
+            android:focusable="true"
+            android:gravity="center"
+            android:nextFocusLeft="@id/tv_time"
+            android:nextFocusDown="@id/layout_hall"
+            android:orientation="vertical"
+            android:padding="@dimen/dp6">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_alone_setting_selected" />
+        </LinearLayout>
+
+
+        <!-- <Button
+             android:id="@+id/btn_setting"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="@dimen/dp40"
+             android:background="@drawable/shape_btn_unselected_bg"
+             android:drawableLeft="@mipmap/icon_setting_unselected"
+
+             android:focusable="true"
+             android:nextFocusLeft="@id/tv_time"
+             android:paddingLeft="@dimen/dp20"
+             android:paddingRight="@dimen/dp20"
+             android:textColor="@color/common_green"
+              />-->
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_hall"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:nextFocusUp="@id/layout_setting"
+            android:padding="@dimen/dp5">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_btn_unselected_bg"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/dp10"
+                android:src="@mipmap/bg_hall" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp150"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="大厅模式"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp27"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_course"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp12"
+            android:layout_marginRight="@dimen/dp12"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:nextFocusUp="@id/layout_setting"
+            android:padding="@dimen/dp5">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_btn_unselected_bg"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/dp10"
+                android:src="@mipmap/bg_course" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp150"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="课程模式"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp27"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_pk"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:nextFocusUp="@id/layout_setting"
+            android:padding="@dimen/dp5">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_btn_unselected_bg"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/dp10"
+                android:src="@mipmap/bg_pk"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp150"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="PK模式"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp27"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_change_view"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp60"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp30"
+    android:paddingRight="@dimen/dp30"
+    tools:background="@drawable/shape_btn_selected_bg">
+
+    <ImageView
+        android:id="@+id/iv_res"
+        android:layout_width="@dimen/dp28"
+        android:layout_height="@dimen/dp28"
+        tools:src="@mipmap/icon_setting_unselected" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="设置"
+        android:gravity="center_vertical"
+        tools:textColor="@color/white"
+        tools:textSize="@dimen/sp26" />
+</LinearLayout>

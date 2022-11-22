@@ -1,0 +1,264 @@
+<resources>
+
+    <dimen name="title_height">45dp</dimen>
+    <!-- textsize -->
+    <dimen name="sp8">8sp</dimen>
+
+    <dimen name="sp10">10sp</dimen>
+    <dimen name="sp14">14sp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="sp17">17sp</dimen>
+    <dimen name="sp18">18sp</dimen>
+    <dimen name="sp20">20sp</dimen>
+    <dimen name="sp22">22sp</dimen>
+    <dimen name="sp24">24sp</dimen>
+    <dimen name="sp26">26sp</dimen>
+    <dimen name="sp30">30sp</dimen>
+    <dimen name="sp50">50sp</dimen>
+    <dimen name="sp60">60sp</dimen>
+    <!-- dp -->
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="dp7">7dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp6">6dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp24">24dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp34">34dp</dimen>
+    <dimen name="dp36">36dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp42">42dp</dimen>
+    <dimen name="dp25">25dp</dimen>
+    <dimen name="dp17">17dp</dimen>
+    <dimen name="dp22">22dp</dimen>
+    <dimen name="dp15">15dp</dimen>
+
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp60">60dp</dimen>
+    <dimen name="dp65">65dp</dimen>
+    <dimen name="dp57">57dp</dimen>
+    <dimen name="dp108">108dp</dimen>
+    <dimen name="dp32">32dp</dimen>
+    <dimen name="dp70">70dp</dimen>
+    <dimen name="dp74">74dp</dimen>
+
+    <dimen name="dp49">49dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="dp230">115dp</dimen>
+    <dimen name="dp300">300dp</dimen>
+    <dimen name="dp160">160dp</dimen>
+    <dimen name="dp198">198dp</dimen>
+    <dimen name="dp190">190dp</dimen>
+    <dimen name="dp186">186dp</dimen>
+    <dimen name="dp147">147dp</dimen>
+    <dimen name="dp151">151dp</dimen>
+    <dimen name="dp37">37dp</dimen>
+    <dimen name="dp700">350dp</dimen>
+    <dimen name="dp1140">550dp</dimen>
+    <dimen name="dp258">258dp</dimen>
+    <dimen name="dp62">62dp</dimen>
+    <dimen name="dp380">190dp</dimen>
+    <dimen name="card1_with">527dp</dimen>
+    <dimen name="card1_height">541dp</dimen>
+    <dimen name="card2_with">472dp</dimen>
+    <dimen name="card2_height">484dp</dimen>
+    <dimen name="card3_with">380dp</dimen>
+    <dimen name="card3_height">389dp</dimen>
+    <dimen name="card4_with">295dp</dimen>
+    <dimen name="card4_height">303dp</dimen>
+
+
+    <dimen name="card4_head_with">57dp</dimen>
+    <dimen name="card4_head_height">57dp</dimen>
+
+    <dimen name="card4_match_size">18sp</dimen>
+    <dimen name="card4_ceter_text_size">90sp</dimen>
+    <dimen name="card4_text_size">27sp</dimen>
+    <dimen name="card4_bar_height">11dp</dimen>
+    <dimen name="card4_barLiearHeight">20dp</dimen>
+    <dimen name="card4_margBotton">-20dp</dimen>
+    <dimen name="card4_image_height">20dp</dimen>
+    <dimen name="card4_image_with">20dp</dimen>
+    <dimen name="card4_radio">13dp</dimen>
+
+
+    <dimen name="card3_head_with">72dp</dimen>
+    <dimen name="card3_head_height">72dp</dimen>
+    <dimen name="card3_name_size">28sp</dimen>
+    <dimen name="card3_match_size">24sp</dimen>
+    <dimen name="card3_ceter_text_size">105sp</dimen>
+    <dimen name="card3_text_size">26sp</dimen>
+    <dimen name="card3_bar_height">14dp</dimen>
+    <dimen name="card3_barLiearHeight">56dp</dimen>
+    <dimen name="card3_margBotton">-46dp</dimen>
+    <dimen name="card3_image_height">26dp</dimen>
+    <dimen name="card3_image_with">26dp</dimen>
+    <dimen name="card3_radio">8dp</dimen>
+
+    <dimen name="card2_ceter_text_size">120sp</dimen>
+    <dimen name="card2_margBotton">-50dp</dimen>
+    <dimen name="card2_name_size">36sp</dimen>
+    <dimen name="card2_match_size">30sp</dimen>
+    <dimen name="card2_text_size">32sp</dimen>
+    <dimen name="card2_head_with">90dp</dimen>
+    <dimen name="card2_head_height">90dp</dimen>
+    <dimen name="card2_image_with">32dp</dimen>
+    <dimen name="card2_image_height">32dp</dimen>
+    <dimen name="card2_barLiearHeight">60dp</dimen>
+    <dimen name="card2_bar_height">16dp</dimen>
+    <dimen name="card2_radio">12dp</dimen>
+
+    <dimen name="card1_ceter_text_size">135sp</dimen>
+
+    <!--<dimen name="card1_ceter_text_size">168sp</dimen>-->
+    <dimen name="card1_margBotton">-60dp</dimen>
+    <dimen name="card1_name_size">40sp</dimen>
+    <dimen name="card1_match_size">34sp</dimen>
+    <dimen name="card1_text_size">36sp</dimen>
+    <dimen name="card1_head_with">100dp</dimen>
+    <dimen name="card1_head_height">100dp</dimen>
+    <dimen name="card1_image_with">36dp</dimen>
+    <dimen name="card1_image_height">36dp</dimen>
+    <dimen name="card1_barLiearHeight">72dp</dimen>
+    <dimen name="card1_bar_height">18dp</dimen>
+    <dimen name="card1_radio">16dp</dimen>
+
+    <dimen name="sp12">12sp</dimen>
+    <dimen name="sp40">40sp</dimen>
+    <dimen name="sp_30">30sp</dimen>
+    <dimen name="sp15">15sp</dimen>
+
+    <dimen name="dp12">12dp</dimen>
+    <dimen name="dp28">28dp</dimen>
+    <dimen name="dp46">23dp</dimen>
+    <dimen name="dp75">75dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp110">110dp</dimen>
+    <dimen name="dp120">120dp</dimen>
+    <dimen name="dp150">150dp</dimen>
+    <dimen name="dp180">180dp</dimen>
+    <dimen name="dp240">120dp</dimen>
+    <dimen name="dp266">266dp</dimen>
+    <dimen name="dp400">400dp</dimen>
+
+    <!--285dp-->
+    <dimen name="ncard1_with">300dp</dimen>
+    <dimen name="ncard1_height">188dp</dimen>
+
+
+    <dimen name="ncard2_with">190dp</dimen>
+    <dimen name="ncard2_height">125dp</dimen>
+    <dimen name="ncard3_with">190dp</dimen>
+    <dimen name="ncard3_height">125dp</dimen>
+
+
+    <dimen name="ncard4_head_with">36dp</dimen>
+    <dimen name="ncard4_head_height">36dp</dimen>
+    <dimen name="ncard4_name_size">30sp</dimen>
+    <dimen name="ncard4_match_size">18sp</dimen>
+    <dimen name="ncard4_ceter_text_size">48sp</dimen>
+    <dimen name="ncard4_text_size">24sp</dimen>
+    <dimen name="ncard4_bar_height">11dp</dimen>
+    <dimen name="ncard4_barLiearHeight">20dp</dimen>
+    <dimen name="ncard4_margBotton">-20dp</dimen>
+    <dimen name="ncard4_image_height">20dp</dimen>
+    <dimen name="ncard4_image_with">20dp</dimen>
+    <dimen name="ncard4_radio">13dp</dimen>
+
+
+    <dimen name="ncard3_head_with">72dp</dimen>
+    <dimen name="ncard3_head_height">72dp</dimen>
+    <dimen name="ncard3_head_border_width">5dp</dimen>
+    <dimen name="ncard3_name_size">28sp</dimen>
+    <dimen name="ncard3_match_size">24sp</dimen>
+    <dimen name="ncard3_ceter_text_size">105sp</dimen>
+    <dimen name="ncard3_text_size">26sp</dimen>
+    <dimen name="ncard3_bar_height">14dp</dimen>
+    <dimen name="ncard3_barLiearHeight">56dp</dimen>
+    <dimen name="ncard3_margBotton">-46dp</dimen>
+    <dimen name="ncard3_image_height">26dp</dimen>
+    <dimen name="ncard3_image_with">26dp</dimen>
+    <dimen name="ncard3_radio">8dp</dimen>
+
+    <dimen name="ncard2_ceter_text_size">120sp</dimen>
+    <dimen name="ncard2_margBotton">-50dp</dimen>
+    <dimen name="ncard2_name_size">36sp</dimen>
+    <dimen name="ncard2_match_size">30sp</dimen>
+    <dimen name="ncard2_text_size">32sp</dimen>
+    <dimen name="ncard2_head_with">90dp</dimen>
+    <dimen name="ncard2_head_height">90dp</dimen>
+
+    <dimen name="ncard2_image_with">32dp</dimen>
+    <dimen name="ncard2_image_height">32dp</dimen>
+    <dimen name="ncard2_head_border_width">7dp</dimen>
+    <dimen name="ncard2_barLiearHeight">60dp</dimen>
+    <dimen name="ncard2_bar_height">16dp</dimen>
+    <dimen name="ncard2_radio">12dp</dimen>
+
+    <dimen name="ncard1_ceter_text_size">75sp</dimen>
+    <!--<dimen name="card1_ceter_text_size">168sp</dimen>-->
+    <dimen name="ncard1_margBotton">-60dp</dimen>
+    <dimen name="ncard1_name_size">60sp</dimen>
+    <dimen name="ncard1_match_size">34sp</dimen>
+    <dimen name="ncard1_text_size">56sp</dimen>
+    <dimen name="ncard1_head_height">60dp</dimen>
+    <dimen name="ncard1_head_with">60dp</dimen>
+    <dimen name="ncard1_image_with">56dp</dimen>
+    <dimen name="ncard1_image_height">56dp</dimen>
+    <dimen name="ncard1_barLiearHeight">72dp</dimen>
+    <dimen name="ncard1_bar_height">18dp</dimen>
+    <dimen name="ncard1_radio">16dp</dimen>
+    <dimen name="dp52">52dp</dimen>
+
+    <dimen name="ncard4_ceter_image_size">30dp</dimen>
+    <dimen name="ncard3_ceter_image_size">40dp</dimen>
+    <dimen name="ncard2_ceter_image_size">50dp</dimen>
+    <dimen name="ncard1_ceter_image_size">50dp</dimen>
+    <dimen name="dp59">59dp</dimen>
+    <dimen name="dp158">158dp</dimen>
+    <dimen name="dp278">300dp</dimen>
+    <dimen name="dp130">130dp</dimen>
+    <dimen name="ncard4_with">225dp</dimen>
+    <dimen name="ncard4_height">120dp</dimen>
+
+    <dimen name="sp6">6sp</dimen>
+    <dimen name="ncard1_content_with">450px</dimen>
+    <dimen name="ncard1_content_height">345px</dimen>
+    <dimen name="card1_dot">45px</dimen>
+    <dimen name="card1_layout_left_width">75px</dimen>
+
+    <dimen name="ncard4_content_with">150dp</dimen>
+    <dimen name="ncard4_content_height">105dp</dimen>
+    <dimen name="card4_layout_left_width">60px</dimen>
+    <dimen name="card4_dot">15dp</dimen>
+    <dimen name="size_21">21sp</dimen>
+    <dimen name="dp4">4dp</dimen>
+    <dimen name="card4_name_size">24sp</dimen>
+    <dimen name="sp9">9sp</dimen>
+    <dimen name="dp45">45dp</dimen>
+
+    <dimen name="userHeigt">145dp</dimen>
+    <dimen name="course_height">218dp</dimen>
+    <dimen name="result_height">66dp</dimen>
+    <dimen name="result_cal_size">42sp</dimen>
+    <dimen name="dp7_5">7.5dp</dimen>
+    <dimen name="sp27">27sp</dimen>
+    <dimen name="dp360">360dp</dimen>
+    <dimen name="dialog_yes_with">276dp</dimen>
+    <dimen name="dialog_yes_height">162dp</dimen>
+    <dimen name="dp18">18dp</dimen>
+    <dimen name="dp417">310dp</dimen>
+    <dimen name="dp237">237dp</dimen>
+    <dimen name="sp38">38sp</dimen>
+    <dimen name="sp36">36sp</dimen>
+    <dimen name="dp255">255dp</dimen>
+    <dimen name="dp188">188dp</dimen>
+    <dimen name="dp210">210dp</dimen>
+</resources>

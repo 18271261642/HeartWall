@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_coure_bottom_free"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp258"
+    android:background="@color/transparent"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp100"
+    android:paddingRight="@dimen/dp100">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="@dimen/dp220"
+            android:layout_height="@dimen/dp74"
+            android:gravity="center"
+            android:text="≤49%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="休闲"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="@dimen/dp220"
+            android:layout_height="@dimen/dp74"
+            android:gravity="center"
+            android:text="50%~59%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="热身"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="@dimen/dp220"
+            android:layout_height="@dimen/dp74"
+            android:gravity="center"
+            android:text="60%~69%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="燃脂运动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="@dimen/dp220"
+            android:layout_height="@dimen/dp74"
+            android:gravity="center"
+            android:text="70%~79%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="有氧运动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="@dimen/dp220"
+            android:layout_height="@dimen/dp74"
+            android:gravity="center"
+            android:text="80%~89%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="无氧运动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="@dimen/dp220"
+            android:layout_height="@dimen/dp74"
+            android:gravity="center"
+            android:text="≥90%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="极限"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+    </LinearLayout>
+</LinearLayout>

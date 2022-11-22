@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/l_layout"
+    android:layout_width="@dimen/dp147"
+    android:layout_height="@dimen/dp151"
+    android:orientation="vertical"
+    tools:background="@color/black"
+    android:visibility="visible">
+
+
+    <RelativeLayout
+        android:id="@+id/lr_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp40"
+            tools:src="@drawable/ic_launcher"
+            android:elevation="1dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp3"
+            android:layout_toRightOf="@id/iv_head"
+            android:ellipsize="end"
+            android:maxEms="4"
+            android:shadowColor="@color/black_50"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            tools:text="name"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp10" />
+
+        <TextView
+            android:id="@+id/tv_match"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:shadowColor="@color/black_50"
+            android:shadowDx="0"
+            tools:text="name"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp8" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_point_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_flag"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-30dp"
+        android:fontFamily=""
+        android:shadowColor="@color/black_50"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="0%"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp50" />
+
+    <View
+        android:id="@+id/tv_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lr_seekbar"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src="@drawable/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/tv_one"
+                style="@style/CardValueStartStyle" />
+        </LinearLayout>
+
+        <TextView style="@style/CardValueStyle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_two"
+                style="@style/CardValueStartStyle" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/CardValueStyle"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/lr_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_point"
+                style="@style/CardValueStartStyle"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view"
+            style="@style/CardValueStyle"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_four"
+                style="@style/CardValueStartStyle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lr_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp20"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <com.jkcq.hrwtv.ui.view.HeartRateStageView
+            android:id="@+id/hrStageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp15"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5" />
+    </LinearLayout>
+</RelativeLayout>

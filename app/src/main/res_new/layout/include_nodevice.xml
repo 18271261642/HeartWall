@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_nodevice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    tools:background="@color/common_bg">
+
+    <ImageView
+        android:id="@+id/iv_watch"
+        android:layout_width="@dimen/dp160"
+        android:layout_height="@dimen/dp300"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_watch" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_watch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp40"
+        android:text="当前未检测到智能心率宝设备"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp30" />
+</RelativeLayout>

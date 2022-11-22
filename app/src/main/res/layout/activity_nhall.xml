@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_splash"
+    tools:context=".wu.newversion.activity.NHallActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/ninclude_title"/>
+
+        <com.jkcq.hrwtv.wu.newversion.view.HeartResultView
+            android:id="@+id/heartresult_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@color/transparent"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        </com.jkcq.hrwtv.wu.newversion.view.HeartResultView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp15"
+            android:background="@color/transparent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/tv_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="休闲"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18"
+                    android:textStyle="bold" />
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:includeFontPadding="true"
+                    android:text="≦49%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dp15"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/tv_two"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp45"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="50%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="≦热身≦"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18"
+                    android:textStyle="bold" />
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="59%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dp15"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/tv_point"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="60%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="≦燃脂≦"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18"
+                    android:textStyle="bold" />
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="69%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dp15"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/tv_four"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="70%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="≦有氧≦"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18"
+                    android:textStyle="bold" />
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="79%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dp15"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/tv_five"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="80%"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="≦无氧≦"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18"
+                    android:textStyle="bold" />
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="89%"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dp15"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/tv_six"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="极限"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18"
+                    android:textStyle="bold" />
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:gravity="center"
+                    android:text="≧90%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

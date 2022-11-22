@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_80"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/ll_match"
+        android:layout_width="@dimen/dp160"
+        android:layout_height="@dimen/dp160"
+        android:background="@drawable/shape_bg_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone"
+        android:gravity="center"
+        android:nextFocusRight="@id/ll_heartstrength"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_img_match"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/icon_sort_match" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp6"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iv_img_match"
+            android:text="@string/match_degree"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <ImageView
+            android:id="@+id/iv_match"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp28"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_sort_unselected" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_heartstrength"
+        android:layout_width="@dimen/dp160"
+        android:layout_height="@dimen/dp160"
+        android:layout_marginLeft="@dimen/dp40"
+        android:background="@drawable/shape_bg_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:nextFocusLeft="@id/ll_match"
+        android:nextFocusRight="@id/ll_heartrate"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_img_hrstrength"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:src="@mipmap/icon_sort_heartstrength" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp6"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iv_img_hrstrength"
+            android:text="@string/hr_strength"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <ImageView
+            android:id="@+id/iv_heartstrength"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp28"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_sort_unselected" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_heartrate"
+        android:layout_width="@dimen/dp160"
+        android:layout_height="@dimen/dp160"
+        android:layout_marginLeft="@dimen/dp40"
+        android:background="@drawable/shape_bg_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:nextFocusLeft="@id/ll_heartstrength"
+        android:nextFocusRight="@id/ll_point"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_hr_img"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:src="@mipmap/icon_sort_heart" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_hr_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp6"
+            android:text="@string/heart_rate"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <ImageView
+            android:id="@+id/iv_heartrate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp28"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_sort_unselected" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_point"
+        android:layout_width="@dimen/dp160"
+        android:layout_height="@dimen/dp160"
+        android:layout_marginLeft="@dimen/dp40"
+        android:background="@drawable/shape_bg_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:nextFocusLeft="@id/ll_heartrate"
+        android:nextFocusRight="@id/ll_cal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_img_point"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:src="@mipmap/icon_sort_point" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_img_point"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp6"
+            android:text="@string/point_count"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <ImageView
+            android:id="@+id/iv_point"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp28"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_sort_unselected" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_cal"
+        android:layout_width="@dimen/dp160"
+        android:layout_height="@dimen/dp160"
+        android:layout_marginLeft="@dimen/dp40"
+        android:background="@drawable/shape_bg_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:nextFocusLeft="@id/ll_point"
+        android:nextFocusRight="@id/iv_close"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_cal_img"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:src="@mipmap/icon_sort_cal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_cal_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp6"
+            android:text="@string/cal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <ImageView
+            android:id="@+id/iv_cal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp28"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_sort_unselected" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dp70"
+        android:layout_height="@dimen/dp70"
+        android:layout_marginLeft="@dimen/dp60"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:nextFocusLeft="@id/ll_cal"
+        android:src="@mipmap/icon_close_unselected" />
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //状态按钮
+    <declare-styleable name="ChangeBtnView">
+        <attr name="defaultBackground" format="reference" />
+        <attr name="selectBackground" format="reference" />
+        <attr name="defaultText" format="reference|string" />
+        <attr name="defaultTextSize" format="dimension" />
+        <attr name="defaultTextColor" format="color" />
+        <attr name="selectTextColor" format="color" />
+        <attr name="defaultImgRes" format="reference" />
+        <attr name="selectImgRes" format="reference" />
+        <attr name="showType" format="integer"></attr>
+    </declare-styleable>
+    //圆形头像
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+
+
+
+    //TVRecyclerView
+
+    <attr name="scrollMode" >
+        <enum name="alignScroll" value="0"/>
+        <enum name="followScroll" value="1"/>
+        <enum name="normalScroll" value="2" />
+    </attr>
+
+    <declare-styleable name="TvRecyclerView">
+        <attr name="scrollMode"/>
+        <attr name="focusDrawable" format="reference" />
+        <attr name="isAutoProcessFocus" format="boolean" />
+        <attr name="focusScale" format="float" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="@dimen/dp15"
+    android:layout_marginRight="@dimen/dp15"
+    android:layout_marginBottom="@dimen/dp15"
+    android:id="@+id/rl_coure_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp45"
+    android:background="@color/transparent"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginRight="@dimen/dp20">
+
+        <TextView
+            android:id="@+id/tv_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="弹力绳心跳循环课程"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_course_name"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="难度："
+                android:textColor="@color/white_50"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_course_leve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:text="剩余时间："
+                android:textColor="@color/white_50"
+                android:textSize="@dimen/sp15" />
+
+            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                android:id="@+id/tv_remain_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_21"
+                tools:text="00:36:29" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_coure_match"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp45"
+        android:layout_weight="1"
+        android:background="@drawable/shape_btn_unselected_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp8"
+        android:paddingRight="@dimen/dp8"
+        android:paddingBottom="@dimen/dp5">
+
+        <com.jkcq.hrwtv.wu.newversion.view.CourseMatchPointView
+            android:id="@+id/coursematchpoint_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp20" />
+
+        <com.jkcq.hrwtv.wu.newversion.view.CourseMatchView
+            android:id="@+id/coursematch_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp8"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

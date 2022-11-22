@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/pk_main_bg"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/ninclude_title"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginRight="35dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <include layout="@layout/include_new_pk_progress_layout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+
+            <com.jkcq.hrwtv.wu.newversion.view.HeartResultView
+                android:id="@+id/newPkRedView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:layout_height="match_parent"/>
+
+
+            <com.jkcq.hrwtv.wu.newversion.view.HeartResultView
+                android:id="@+id/newPkBlueView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <include layout="@layout/include_course_bottom" />
+
+</LinearLayout>

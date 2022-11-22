@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/card4_with"
+    android:layout_height="@dimen/card4_height"
+    android:background="@drawable/shape_bg_black_40"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/lr_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dp57"
+            android:layout_height="@dimen/dp57"
+            android:elevation="@dimen/dp2" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp6"
+            android:layout_toRightOf="@id/iv_head"
+            android:ellipsize="end"
+            android:maxEms="4"
+            android:shadowColor="@color/black_50"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:singleLine="true"
+            android:text="dfsdfffdfdfdfdfdfdfd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+    </RelativeLayout>
+
+    <View style="@style/common_line_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/match_rang"
+                style="@style/taskRsultStyles"
+                android:layout_marginLeft="@dimen/dp16"
+                android:text="匹配:60%" />
+
+
+            <View style="@style/common_line_style" />
+
+
+            <TextView
+                android:id="@+id/task_point"
+                style="@style/taskRsultStyles"
+                android:layout_marginLeft="@dimen/dp16"
+                android:drawableLeft="@drawable/icon_score_point"
+                android:drawablePadding="@dimen/dp16"
+                android:text="90" />
+
+            <View style="@style/common_line_style" />
+
+
+            <TextView
+                android:id="@+id/task_cal"
+                style="@style/taskRsultStyles"
+                android:layout_marginLeft="@dimen/dp16"
+                android:drawableLeft="@drawable/icon_score_cal"
+                android:drawablePadding="@dimen/dp16"
+                android:text="556" />
+
+            <View style="@style/common_line_style" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.jkcq.hrwtv.ui.view.AvgStageView
+                    android:id="@+id/average_view"
+                    android:layout_width="@dimen/dp22"
+                    android:layout_height="@dimen/dp22"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp22" />
+
+                <TextView
+                    android:id="@+id/average_strength"
+                    style="@style/taskRsultStyles"
+                    android:layout_marginLeft="@dimen/dp2"
+                    android:text="56" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dp1"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/task_power"
+                style="@style/taskRsultStyles"
+                android:layout_marginLeft="@dimen/dp16"
+                android:drawableLeft="@drawable/icon_score_light"
+                android:drawablePadding="@dimen/dp16"
+                android:text="56"
+                android:visibility="invisible"/>
+
+            <View style="@style/common_line_style" />
+
+
+            <TextView
+                android:id="@+id/task_heart_rates"
+                style="@style/taskRsultStyles"
+                android:layout_marginLeft="@dimen/dp16"
+                android:drawableLeft="@drawable/icon_score_avg_hr"
+                android:drawablePadding="@dimen/dp16"
+                android:text="56" />
+
+            <View style="@style/common_line_style" />
+
+
+            <TextView
+                android:id="@+id/total_cal"
+                style="@style/taskRsultStyles"
+                android:layout_marginLeft="@dimen/dp16"
+                android:drawableLeft="@drawable/icon_score_cal"
+                android:drawablePadding="@dimen/dp16"
+                android:text="56" />
+
+            <View style="@style/common_line_style" />
+
+
+            <TextView
+                android:id="@+id/real_time_heart_rate"
+                style="@style/taskRsultStyles"
+                android:layout_marginLeft="@dimen/dp16"
+                android:drawableLeft="@drawable/icon_score_hr"
+                android:drawablePadding="@dimen/dp16"
+                android:text="56" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/common_line_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/type_color_grey"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp24"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@color/streng_deep_gray"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                android:id="@+id/type_color_blue"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp24"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@color/streng_blue"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                android:id="@+id/type_color_green"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp24"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@color/streng_green"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                android:id="@+id/type_color_yellow"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp24"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@color/streng_yello"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                android:id="@+id/type_color_red"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp24"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@color/streng_red"
+                android:gravity="center"
+                android:text="22"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lr_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <com.jkcq.hrwtv.ui.view.HeartRateResultView
+                android:id="@+id/hrStageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

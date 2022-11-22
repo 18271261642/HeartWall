@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.jkcq.hrwtv.ui.activity.MainActivity">
+
+    <include layout="@layout/include_title"></include>
+
+    <FrameLayout
+        android:id="@+id/frament"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <LinearLayout
+        android:id="@+id/rl_mue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:background="@null"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/transparent" />
+
+        <LinearLayout
+            android:id="@+id/lr_menu_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/menu_bg"
+            android:orientation="vertical"></LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/result_height"
+    android:layout_margin="@dimen/dp7_5"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_btn_unselected_bg"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15">
+
+        <ImageView
+            android:id="@+id/iv_pk_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp8"
+            android:src="@mipmap/icon_pk_win" />
+
+        <TextView
+            android:id="@+id/tv_pk_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_pk_state"
+            android:text="胜利 . "
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_21"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_pk_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_pk_title"
+            android:text="红队"
+            android:textColor="@color/sport_state_six"
+            android:textSize="@dimen/size_21"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_pk_cal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp8"
+            android:layout_toLeftOf="@+id/tv_pk_cal_value"
+            android:src="@mipmap/icon_pk_result_red" />
+
+        <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+            android:id="@+id/tv_pk_cal_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_pk_cal_util"
+            android:includeFontPadding="true"
+            android:text="42"
+            android:textColor="@color/white"
+            android:textSize="@dimen/result_cal_size"
+            android:textStyle="bold" />
+
+        <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+            android:id="@+id/tv_pk_cal_util"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_pk_cal_value"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/dp5"
+            android:includeFontPadding="true"
+            android:text="kcal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_21"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_80"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp40"
+    android:paddingRight="@dimen/dp40">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp80"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusRight="@id/ll_change_view"
+            android:nextFocusDown="@id/tv_recyclerview"
+            android:src="@mipmap/icon_close_unselected" />
+
+        <LinearLayout
+            android:id="@+id/ll_change_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp60"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginLeft="@dimen/dp40"
+            android:nextFocusLeft="@id/iv_close"
+            android:nextFocusDown="@id/tv_recyclerview"
+            android:background="@drawable/shape_layout_white_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp30"
+            android:paddingRight="@dimen/dp30">
+
+            <ImageView
+                android:id="@+id/iv_point"
+                android:layout_width="@dimen/dp42"
+                android:layout_height="@dimen/dp42"
+                android:src="@mipmap/icon_hide_point_unselect" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:gravity="center_vertical"
+                android:text="全隐藏"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp26" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp60"
+            android:gravity="center_vertical"
+            android:text="已选隐藏5人"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp30" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp60"
+            android:gravity="center_vertical"
+            android:text="设备连接人数50人"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp30" />
+    </LinearLayout>
+
+      <com.jkcq.hrwtv.wu.newversion.view.tvrecyclerview.TvRecyclerView
+          android:id="@+id/tv_recyclerview"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:scrollMode="followScroll"
+          app:isAutoProcessFocus="false"
+          app:focusScale="1.1"
+          android:layout_marginTop="@dimen/dp40"
+          tools:listitem="@layout/item_man_select" />
+</LinearLayout>

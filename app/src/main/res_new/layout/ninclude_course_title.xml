@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_title"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp40">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp30"
+        tools:text="23:00" />
+
+    <View
+        android:layout_width="@dimen/dp1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="@color/gray"></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp40"
+        android:text="人数："
+        android:textColor="@color/common_grey"
+        android:textSize="@dimen/sp30" />
+
+    <TextView
+        android:id="@+id/tv_man_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp30"
+        tools:text="@string/people" />
+
+    <View
+        android:layout_width="@dimen/dp1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="@color/gray"></View>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/dp700"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp40"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp30"
+        tools:text="深圳松岗满京华店" />
+
+    <RelativeLayout
+        android:id="@+id/rl_free_model"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.jkcq.hrwtv.wu.newversion.view.ChangeBtnView
+            android:id="@+id/cbtn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp60"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp40"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusLeft="@id/cbtn_more"
+            android:nextFocusRight="@id/cbtn_course"
+            app:defaultBackground="@drawable/shape_cbtn_unselected_bg"
+            app:defaultImgRes="@mipmap/icon_setting_unselected"
+            app:defaultText="@string/setting"
+            app:defaultTextColor="@color/common_green"
+            app:defaultTextSize="@dimen/sp26"
+            app:selectBackground="@drawable/shape_cbtn_selected_bg"
+            app:selectImgRes="@mipmap/icon_setting_selected"
+            app:selectTextColor="@color/white" />
+
+        <com.jkcq.hrwtv.wu.newversion.view.ChangeBtnView
+            android:id="@+id/cbtn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp60"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp40"
+            android:layout_toLeftOf="@id/cbtn_setting"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusLeft="@id/cbtn_course"
+            android:nextFocusUp="@id/cbtn_more"
+            android:nextFocusForward="@id/cbtn_setting"
+            app:defaultBackground="@drawable/shape_cbtn_unselected_bg"
+            app:defaultImgRes="@mipmap/icon_more_unselected"
+            app:defaultText="@string/more"
+            app:defaultTextColor="@color/common_green"
+            app:defaultTextSize="@dimen/sp26"
+            app:selectBackground="@drawable/shape_cbtn_selected_bg"
+            app:selectImgRes="@mipmap/icon_more_selected"
+            app:selectTextColor="@color/white" />
+
+        <com.jkcq.hrwtv.wu.newversion.view.ChangeBtnView
+            android:id="@+id/cbtn_course"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp60"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp40"
+            android:layout_toLeftOf="@id/cbtn_more"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusUp="@id/cbtn_more"
+            android:nextFocusForward="@id/cbtn_more"
+            android:nextFocusLeft="@id/cbtn_setting"
+            app:defaultBackground="@drawable/shape_cbtn_unselected_bg"
+            app:defaultImgRes="@mipmap/icon_coursemodel_unselected"
+            app:defaultText="@string/course_model"
+            app:defaultTextColor="@color/common_green"
+            app:defaultTextSize="@dimen/sp26"
+            app:selectBackground="@drawable/shape_cbtn_selected_bg"
+            app:selectImgRes="@mipmap/icon_coursemodel_selected"
+            app:selectTextColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_course_model"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.jkcq.hrwtv.wu.newversion.view.ChangeBtnView
+            android:id="@+id/cbtn_more_free"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp60"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp40"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusLeft="@id/cbtn_free_model"
+            android:nextFocusRight="@id/iv_play"
+            app:defaultBackground="@drawable/shape_cbtn_unselected_bg"
+            app:defaultImgRes="@mipmap/icon_more_unselected"
+            app:defaultText="@string/more"
+            app:defaultTextColor="@color/common_green"
+            app:defaultTextSize="@dimen/sp26"
+            app:selectBackground="@drawable/shape_cbtn_selected_bg"
+            app:selectImgRes="@mipmap/icon_more_selected"
+            app:selectTextColor="@color/white" />
+
+        <com.jkcq.hrwtv.wu.newversion.view.ChangeBtnView
+            android:id="@+id/cbtn_free_model"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp60"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp40"
+            android:layout_toLeftOf="@id/cbtn_more_free"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusLeft="@id/iv_next"
+            android:nextFocusRight="@id/cbtn_more_free"
+            app:defaultBackground="@drawable/shape_cbtn_unselected_bg"
+            app:defaultImgRes="@mipmap/icon_freemodel_unselected"
+            app:defaultText="@string/free_model"
+            app:defaultTextColor="@color/common_green"
+            app:defaultTextSize="@dimen/sp26"
+            app:selectBackground="@drawable/shape_cbtn_selected_bg"
+            app:selectImgRes="@mipmap/icon_freemodel_selected"
+            app:selectTextColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp40"
+            android:layout_toLeftOf="@id/cbtn_free_model"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="@dimen/dp52"
+                android:layout_height="@dimen/dp52"
+                android:focusable="true"
+                android:nextFocusRight="@id/iv_previous"
+                android:nextFocusLeft="@id/cbtn_more_free"
+                android:focusableInTouchMode="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_stop_unselected" />
+
+            <ImageView
+                android:id="@+id/iv_previous"
+                android:layout_width="@dimen/dp52"
+                android:layout_height="@dimen/dp52"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusLeft="@id/iv_play"
+                android:nextFocusRight="@id/iv_next"
+                android:layout_marginLeft="@dimen/dp20"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_previous_unselected" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="@dimen/dp52"
+                android:layout_height="@dimen/dp52"
+                android:layout_marginLeft="@dimen/dp20"
+                android:nextFocusLeft="@id/iv_previous"
+                android:nextFocusRight="@id/cbtn_free_model"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_next_unselected" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

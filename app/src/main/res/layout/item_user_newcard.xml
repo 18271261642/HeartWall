@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/l_layout"
+    android:layout_width="@dimen/dp147"
+    android:layout_height="@dimen/dp151"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:background="@color/black">
+
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        android:elevation="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp3"
+        android:layout_toRightOf="@id/iv_head"
+        android:ellipsize="end"
+        android:maxEms="4"
+        android:shadowColor="@color/black_50"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp10"
+        app:layout_constraintBottom_toBottomOf="@id/iv_head"
+        app:layout_constraintLeft_toRightOf="@id/iv_head"
+        app:layout_constraintTop_toTopOf="@id/iv_head"
+        tools:text="name" />
+
+    <TextView
+        android:id="@+id/tv_match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:shadowColor="@color/black_50"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp8"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="name" />
+
+
+    <TextView
+        android:id="@+id/tv_point_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily=""
+        android:shadowColor="@color/black_50"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="0%"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp50"
+        app:layout_constraintBottom_toTopOf="@id/iv_one"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_head" />
+
+    <ImageView
+        android:id="@+id/iv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_one"
+        app:layout_constraintRight_toRightOf="@id/tv_one"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        tools:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/iv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/iv_one"
+        app:layout_constraintLeft_toLeftOf="@id/tv_two"
+        app:layout_constraintRight_toRightOf="@id/tv_two"
+        app:layout_constraintTop_toTopOf="@id/iv_one"
+        tools:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/iv_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/iv_one"
+        app:layout_constraintLeft_toLeftOf="@id/tv_four"
+        app:layout_constraintRight_toRightOf="@id/tv_four"
+        app:layout_constraintTop_toTopOf="@id/iv_one"
+        tools:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_one"
+        style="@style/CardValueStartStyle"
+        android:layout_marginLeft="@dimen/dp8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_two"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84"
+        tools:text="tv_one" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        style="@style/CardValueStartStyle"
+        app:layout_constraintBottom_toBottomOf="@id/tv_one"
+        app:layout_constraintLeft_toRightOf="@id/tv_one"
+        app:layout_constraintRight_toLeftOf="@id/tv_four"
+        app:layout_constraintTop_toTopOf="@id/tv_one"
+        tools:text="tv_two" />
+
+
+    <TextView
+        android:id="@+id/tv_four"
+        style="@style/CardValueStartStyle"
+        android:layout_marginRight="@dimen/dp8"
+        app:layout_constraintBottom_toBottomOf="@id/tv_one"
+        app:layout_constraintLeft_toRightOf="@id/tv_two"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_one"
+        tools:text="tv_four" />
+
+    <com.jkcq.hrwtv.ui.view.HeartRateStageView
+        android:id="@+id/hrStageView"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="@drawable/seekbar_bg"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

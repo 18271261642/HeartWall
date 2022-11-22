@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 常用颜色值 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <!-- 表情颜色 -->
+    <color name="gray">#FF888888</color>
+
+
+    <color name="streng_light_gray">#D5D5D5</color>
+    <color name="streng_deep_gray">#676767</color>
+    <color name="streng_blue">#347FFD</color>
+    <color name="streng_green">#03E785</color>
+    <color name="streng_yello">#FFEB3E</color>
+    <color name="streng_red">#FF5454</color>
+
+    <color name="_d8d8d8">#D8D8D8</color>
+    <color name="_333333">#333333</color>
+    <color name="_cccccc">#cccccc</color>
+    <color name="listview_divide_line">#e4e4e4</color>
+    <color name="common_bg_alpha_white_80">#ccf3f3f3</color>
+
+    <color name="transparent">#00000000</color>
+    <!--95% — F2-->
+    <color name="black_95">#F2000000</color>
+    <color name="white_95">#F2ffffff</color>
+    <!--90% — E6-->
+    <color name="black_90">#E6000000</color>
+    <color name="white_90">#E6ffffff</color>
+    <!--85% — D9-->
+    <color name="black_85">#D9000000</color>
+    <color name="white_85">#D9ffffff</color>
+    <!--80% — CC-->
+    <color name="black_80">#CC000000</color>
+    <color name="white_80">#CCffffff</color>
+    <!--75% — BF-->
+    <color name="black_75">#BF000000</color>
+    <color name="white_75">#BFffffff</color>
+    <!--70% — B3-->
+    <color name="black_70">#B3000000</color>
+    <color name="white_70">#B3ffffff</color>
+    <!--65% — A6-->
+    <color name="black_65">#A6000000</color>
+    <color name="white_65">#A6ffffff</color>
+    <!--60% — 99-->
+    <color name="black_60">#99000000</color>
+    <color name="white_60">#99ffffff</color>
+    <!--55% — 8C-->
+    <color name="black_55">#8C000000</color>
+    <color name="white_55">#8Cffffff</color>
+    <!--50% — 80-->
+    <color name="black_50">#80000000</color>
+    <color name="white_50">#80ffffff</color>
+    <!--45% — 73-->
+    <color name="black_45">#73000000</color>
+    <color name="white_45">#73ffffff</color>
+    <!--40% — 66-->
+    <color name="black_40">#66000000</color>
+    <color name="white_40">#66ffffff</color>
+    <!--35% — 59-->
+    <color name="black_35">#59000000</color>
+    <color name="white_35">#59ffffff</color>
+    <!--30% — 4D-->
+    <color name="black_30">#4D000000</color>
+    <color name="white_30">#4Dffffff</color>
+    <!--25% — 40-->
+    <color name="black_25">#40000000</color>
+    <color name="white_25">#40ffffff</color>
+    <!--20% — 33-->
+    <color name="black_20">#33000000</color>
+    <color name="white_20">#33ffffff</color>
+    <!--15% — 26-->
+    <color name="black_15">#26000000</color>
+    <color name="white_15">#26ffffff</color>
+    <!--10% — 1A-->
+    <color name="black_10">#1A000000</color>
+    <color name="white_10">#1aFFFFFF</color>
+    <!--5% — 0D-->
+    <color name="black_5">#0D000000</color>
+    <color name="white_5">#0Dffffff</color>
+    <color name="colorPrimary_60">#3C336666</color>
+
+
+    <color name="common_title_bg">#101D37</color>
+    <color name="common_green">#ff1dce74</color>
+    <color name="common_item_bg">#33ffffff</color>
+    <color name="common_bg">#0A1324</color>
+
+    //new version color
+    <color name="common_grey">#9399A5</color>
+
+    //六种运动状态颜色
+    <color name="sport_state_one">#999999</color>
+    <color name="sport_state_two">#757575</color>
+    <color name="sport_state_three">#0084FF</color>
+    <color name="sport_state_four">#32D74B</color>
+    <color name="sport_state_five">#FFD60A</color>
+    <color name="sport_state_six">#FF453A</color>
+    <color name="sport_state_one1">#80999999</color>
+    <color name="sport_state_two2">#80757575</color>
+    <color name="sport_state_three3">#800084FF</color>
+    <color name="sport_state_four4">#8032D74B</color>
+    <color name="sport_state_five5">#80FFD60A</color>
+    <color name="sport_state_six6">#80FF453A</color>
+
+
+    <color name="common_text_color">#1DCE74</color>
+    <color name="black_text">#303030</color>
+
+    <color name="green_bg">#1DCE74</color>
+
+    <color name="color_DEB237">#DEB237</color>
+    <color name="color_EF894F">#EF894F</color>
+    <color name="color_00B167">#00B167</color>
+    <color name="color_87ED4D">#87ED4D</color>
+
+    <color name="grey_20">#38d8d8d8</color>
+    <color name="color_1F2646">#1F2646</color>
+</resources>

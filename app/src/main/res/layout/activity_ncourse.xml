@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg"
+    android:orientation="vertical"
+    tools:context=".wu.newversion.activity.NCourseActivity">
+
+    <include layout="@layout/ninclude_title"/>
+
+
+    <com.jkcq.hrwtv.wu.newversion.view.CourseHeartResultView
+        android:id="@+id/heartresult_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"/>
+
+    <include layout="@layout/include_course_bottom"/>
+</LinearLayout>

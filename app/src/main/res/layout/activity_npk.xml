@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".wu.newversion.activity.NCourseActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="8dp"
+        android:background="@mipmap/pk_main_bg"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    <include
+        android:id="@+id/layout_top"
+        layout="@layout/ninclude_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginRight="35dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <include layout="@layout/include_new_pk_progress_layout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/newPkRedRYView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/newPkBlueRyView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/activity_pk_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/ll_point"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/shape_btn_unselected_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp10"/>
+
+    </LinearLayout>
+
+
+    <include layout="@layout/include_course_bottom" />
+
+    </LinearLayout>
+</LinearLayout>

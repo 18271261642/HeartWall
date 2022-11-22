@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pull_to_refresh_footer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|bottom"
+    android:paddingBottom="@dimen/dp15"
+    android:paddingTop="@dimen/dp15"
+    android:visibility="visible">
+
+    <FrameLayout
+        android:id="@+id/pull_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <com.jkcq.gym.view.ProgressWheel xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_to_load_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:matProg_barColor="@color/listview_divide_line"
+            app:matProg_barWidth="@dimen/dp2"
+            app:matProg_circleRadius="@dimen/dp20"
+            app:matProg_progressIndeterminate="true" />
+
+        <ImageView
+            android:id="@+id/pull_to_load_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/pull_to_load_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_toRightOf="@id/pull_bottom"
+        android:gravity="center"
+        android:padding="@dimen/dp2"
+        android:text="@string/pullup_to_load"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp16" />
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<!--
+    <item
+        android:drawable="@drawable/icon_light1"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/icon_light2"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light3"
+        android:duration="100" />
+<item
+        android:drawable="@drawable/icon_light4"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light5"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light6"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light7"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light8"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light9"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light10"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light11"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light12"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light13"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light14"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light15"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light16"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light17"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light18"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light19"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_light20"
+        android:duration="100" />
+-->
+
+
+</animation-list>

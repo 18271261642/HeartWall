@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_btn_black_90_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_btn_unselected_bg"></View>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/bg_yes_or_no"></ImageView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_ceter"
+            android:lineSpacingMultiplier="1.3"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:gravity="center"
+            android:text="是否更新到最新版本固件V1.2.0? （目前版本：v1.1.3）"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp27"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp30"
+            android:layout_below="@+id/view_ceter"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_btn_unselected_bg"
+                android:focusable="true"
+                android:gravity="center"
+                android:nextFocusRight="@id/btn_sure"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp10"
+                android:layout_weight="1"></View>
+
+            <TextView
+                android:id="@+id/btn_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_btn_unselected_bg"
+                android:focusable="true"
+                android:gravity="center"
+                android:nextFocusLeft="@id/btn_cancel"
+                android:nextFocusRight="@id/btn_sure"
+                android:paddingLeft="@dimen/sp15"
+                android:paddingRight="@dimen/sp15"
+                android:text="更新"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

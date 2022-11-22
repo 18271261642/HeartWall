@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.jkcq.hrwtv.ui.activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/black_30">
+
+
+        <LinearLayout
+            android:id="@+id/ll_left_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_height"
+            android:background="@drawable/bg_title_left_"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_club"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                tools:text="深圳会所"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp22" />
+
+            <ImageView
+                android:id="@+id/iv_line"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_line" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                tools:text="12:00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp22" />
+
+            <Button
+                android:id="@+id/btn_test"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@drawable/common_button_selector"
+                android:focusable="true"
+
+                android:focusableInTouchMode="true"
+                android:text="测试按钮"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingLeft="@dimen/dp15"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/ll_left_title"
+            android:background="@drawable/shape_tv_bg_black"
+            android:layout_centerVertical="true"
+            android:text="@string/current_course"
+            android:gravity="center_vertical"
+            android:textColor="@color/_333333"
+            android:textSize="@dimen/sp24" />
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusLeft="@id/iv_menu"
+            android:nextFocusRight="@id/iv_menu"
+            android:nextFocusUp="@id/iv_menu"
+            android:nextFocusDown="@id/lr_menu_view"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_menu_bg_selector" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frament"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <LinearLayout
+        android:id="@+id/rl_mue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:background="@null"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/transparent" />
+
+        <LinearLayout
+            android:id="@+id/lr_menu_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/menu_bg"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

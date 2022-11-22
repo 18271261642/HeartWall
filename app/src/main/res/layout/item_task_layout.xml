@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp70"
+    android:background="@drawable/common_button_selector"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:focusable="true"
+    >
+    <TextView
+        android:id="@+id/task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@drawable/menu_txt_selector"
+        android:textSize="@dimen/sp20"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:duplicateParentState="true"
+        />
+
+</LinearLayout>

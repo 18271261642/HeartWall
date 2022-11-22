@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/dp10"
+    tools:context=".wu.newversion.activity.CourseSortActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/title_height">
+
+        <LinearLayout
+            android:id="@+id/rl_img_back"
+            android:layout_width="@dimen/dp45"
+            android:layout_height="@dimen/dp45"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_btn_back"
+            android:focusable="true"
+            android:gravity="center"
+            android:nextFocusLeft="@id/tv_time"
+            android:nextFocusDown="@id/layout_hall"
+            android:orientation="vertical"
+            android:padding="@dimen/dp6">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/icon_back" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp45"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_toRightOf="@+id/rl_img_back"
+            android:background="@drawable/shape_btn_unselected_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:text="深圳松岗满京华店"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_name"
+            android:layout_toRightOf="@+id/tv_name"
+            android:paddingLeft="@dimen/dp10"
+            android:text="深圳松岗满京华店"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_name"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/tv_name"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="难度："
+                android:textColor="@color/white_50"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_lever"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:text="时长："
+                android:textColor="@color/white_50"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                android:id="@+id/tv_course_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:44:59"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_21"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_item"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp45"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cal"
+                style="@style/common_tv_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginLeft="@dimen/dp15"
+                android:nextFocusLeft="@id/rl_img_back"
+                android:nextFocusRight="@id/tv_match"
+                android:nextFocusDown="@id/rv_sort_result"
+                android:text="@string/cal"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_match"
+                style="@style/common_tv_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginLeft="@dimen/dp15"
+                android:nextFocusLeft="@id/tv_cal"
+                android:nextFocusRight="@id/tv_point"
+                android:nextFocusDown="@id/rv_sort_result"
+                android:text="@string/match_degree"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_point"
+                style="@style/common_tv_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginLeft="@dimen/dp15"
+                android:nextFocusLeft="@id/tv_match"
+                android:nextFocusRight="@id/tv_heart_strength"
+                android:nextFocusDown="@id/rv_sort_result"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:text="@string/point_count"
+                android:textSize="@dimen/sp15" />
+
+
+            <TextView
+                android:id="@+id/tv_heart_strength"
+                style="@style/common_tv_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginLeft="@dimen/dp15"
+                android:nextFocusLeft="@id/tv_point"
+                android:nextFocusRight="@id/tv_hr"
+                android:nextFocusDown="@id/rv_sort_result"
+                android:text="@string/hr_strength"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_hr"
+                style="@style/common_tv_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginLeft="@dimen/dp15"
+                android:nextFocusLeft="@id/tv_heart_strength"
+                android:nextFocusRight="@id/rl_img_back"
+                android:nextFocusDown="@id/rv_sort_result"
+                android:text="@string/heart_rate"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/dp20">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp40"
+            android:orientation="vertical">
+            <include layout="@layout/include_head_course_sort"/>
+
+            <com.jkcq.hrwtv.wu.newversion.view.tvrecyclerview.TvRecyclerView
+                android:id="@+id/rv_sort_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:focusScale="1.1"
+                app:isAutoProcessFocus="false"
+                app:scrollMode="followScroll"
+                tools:listitem="@layout/item_course_sort"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_point"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/shape_btn_unselected_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorAccent"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/view_title_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/common_title_button_bg_selector"
+        android:clickable="true"
+        android:drawablePadding="@dimen/dp5"
+        android:gravity="center_vertical|left"
+        android:maxLines="1"
+        android:minEms="4"
+        android:padding="@dimen/dp15"
+        android:text="取消"
+        android:textColor="@drawable/common_title_text_selector"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/view_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp5"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="@dimen/dp5"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"/>
+
+    <TextView
+        android:id="@+id/view_title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/common_title_button_bg_selector"
+        android:clickable="true"
+        android:drawablePadding="@dimen/dp5"
+        android:gravity="center_vertical|right"
+        android:maxLines="1"
+        android:minEms="4"
+        android:padding="15dp"
+        android:text="取消"
+        android:textColor="@drawable/common_title_text_selector"
+        android:textSize="@dimen/sp14"/>
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">单独使用心率墙</string>
+
+    <string name="please_wait">请稍候....</string>
+    <string name="please_check_that_your_network_is_connected">请检查您的网络连接"</string>
+    <string name="main_exit_tips">再按一次退出</string>
+    <string name="back_main">回到主页</string>
+    <string name="stay_current_page">留在当前页</string>
+    <string name="arg_Strength">匹配:%1s%%</string>
+    <string name="task_time"> 总时长:%1$s分钟</string>
+
+    <string name="download_error">下载出错</string>
+    <string name="download_now">立即下载</string>
+    <string name="download_nexttime">下次再说</string>
+    <string name="already_newest">当前已经是最新版本了！</string>
+    <string name="check_failed">非常抱歉，获取最新版本出现了异常。请稍后再试一试。</string>
+    <string name="downloading">正在下载</string>
+    <string name="install_failed">安装失败</string>
+    <string name="the_net_status_isnt_wifi">目前不在wifi网络下,建议在wifi状态下下载。</string>
+    <string name="ensure_do_delete">确认要删除吗？</string>
+    <string name="ensure_do_dissolve">确认要解散吗？</string>
+    <string name="net_error">网络异常</string>
+    <string name="undown">取消下载</string>
+
+
+    <string name="permission_bluetooth">请允许使用蓝牙以提供精确的定位从而更好的完成您的打卡操作</string>
+    <string name="permission_photograph">请允许访问拍照功能以便您能正常使用扫一扫和相机功能</string>
+    <string name="permission_contacts">请允许访问通讯录权限以便您能将联系人保存到通讯录</string>
+    <string name="permission_location">需要打开位置服务。为保障您的个人隐私，所有定位功能都是您在使用相应功能时授权并主动发起的</string>
+    <string name="permission_recording">请允许访问语音权限以便您能正常使用聊天中的发送语音功能</string>
+    <string name="permission_add_image">请允许为您添加图片，否则您将无法选择当前设备的图片</string>
+    <string name="permission_see_image">请允许访问图库以正常使用相册中的图片</string>
+    <string name="permission_storage">请允许启用存储空间权限，以正常功能</string>
+    <string name="permission_phone">请允许启用电话权限</string>
+    <string name="permission_shortcut">请允许启用快捷方式权限，以便创建签到快捷方式</string>
+
+    <string name="current_course">当前课程：%1$s</string>
+    <string name="setting">设置</string>
+    <string name="more">更多</string>
+    <string name="people">在店人数：%1$s人</string>
+    <string name="heart_rate">心率</string>
+    <string name="hr_strength">强度</string>
+    <string name="cal">卡路里</string>
+    <string name="title_cal">消耗/卡路里</string>
+    <string name="point_count">经验值</string>
+    <string name="match_degree">匹配度</string>
+    <string name="range_ways">排序/用户名</string>
+    <string name="average_hr_strength">平均心率强度</string>
+    <string name="average_hr">平均心率</string>
+    <string name="course_model">课程模式</string>
+    <string name="free_model">自由模式</string>
+    <string name="select_hr_course">请选择心率课程</string>
+    <string name="course_time_minute">时长：%1$s</string>
+    <string name="open_course_confirm">确认打开该课程?</string>
+
+</resources>

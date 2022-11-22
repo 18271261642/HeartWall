@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/l_layout"
+    android:layout_width="@dimen/ncard4_with"
+    android:layout_height="@dimen/ncard4_height"
+    android:visibility="visible"
+    tools:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_head"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/hrStageView"
+        app:layout_constraintHeight_percent="0.88"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.39">
+
+
+        <!--    <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+               app:layout_constraintGuide_percent=""/>-->
+
+        <com.jkcq.hrwtv.wu.newversion.view.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/ncard4_head_with"
+            android:layout_height="@dimen/ncard4_head_with"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/dp3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.46"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.33"
+            tools:src="@mipmap/icon_default_head" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp3"
+            android:paddingLeft="@dimen/dp5"
+            android:paddingRight="@dimen/dp5"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/hrStageView"
+        app:layout_constraintHeight_percent="0.88"
+        app:layout_constraintLeft_toRightOf="@id/ll_head"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.61">
+
+        <TextView
+            android:id="@+id/tv_match"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="hhhhhhh" />
+
+
+        <TextView
+            android:id="@+id/tv_point_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ncard4_ceter_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.22"
+            tools:text="77" />
+
+        <ImageView
+            android:id="@+id/iv_center"
+            android:layout_width="@dimen/ncard4_image_height"
+            android:layout_height="@dimen/ncard4_image_height"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_main_precent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_point_value"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/iv_one"
+            android:layout_width="@dimen/ncard4_image_with"
+            android:layout_height="@dimen/ncard4_image_with"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/tv_one"
+            app:layout_constraintRight_toRightOf="@id/tv_one"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.76"
+            tools:src="@drawable/icon_hr_course_nor" />
+
+        <ImageView
+            android:id="@+id/iv_two"
+            android:layout_width="@dimen/ncard4_image_with"
+            android:layout_height="@dimen/ncard4_image_with"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/iv_one"
+            app:layout_constraintLeft_toLeftOf="@id/tv_two"
+            app:layout_constraintRight_toRightOf="@id/tv_two"
+            app:layout_constraintTop_toTopOf="@id/iv_one"
+            tools:src="@drawable/icon_main_point" />
+
+        <ImageView
+            android:id="@+id/iv_three"
+            android:layout_width="@dimen/ncard4_image_with"
+            android:layout_height="@dimen/ncard4_image_with"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/iv_one"
+            app:layout_constraintLeft_toLeftOf="@id/tv_point"
+            app:layout_constraintRight_toRightOf="@id/tv_point"
+            app:layout_constraintTop_toTopOf="@id/iv_one"
+            tools:src="@drawable/icon_main_cal" />
+
+        <TextView
+            android:id="@+id/tv_one"
+            style="@style/CardValueStartStyle"
+            android:layout_marginLeft="@dimen/dp20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_two"
+            tools:text="tv_one" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            style="@style/CardValueStartStyle"
+            app:layout_constraintBottom_toBottomOf="@id/tv_one"
+            app:layout_constraintLeft_toRightOf="@id/tv_one"
+            app:layout_constraintRight_toLeftOf="@id/tv_point"
+            tools:text="tv_two" />
+
+        <TextView
+            android:id="@+id/tv_point"
+            style="@style/CardValueStartStyle"
+            android:layout_marginRight="@dimen/dp20"
+            app:layout_constraintBottom_toBottomOf="@id/tv_one"
+            app:layout_constraintLeft_toRightOf="@id/tv_two"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_one"
+            tools:text="tv_three" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.jkcq.hrwtv.ui.view.HeartRateStageView
+        android:id="@+id/hrStageView"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp3"
+        android:layout_marginRight="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp6"
+        android:background="@drawable/shape_heartstate_bg"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.12" />
+</androidx.constraintlayout.widget.ConstraintLayout>

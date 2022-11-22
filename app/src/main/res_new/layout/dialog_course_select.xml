@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp380">
+
+    <View
+        android:id="@+id/fl_select"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/shape_layout_selected_linear_bg"></View>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_layout_white_bg"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/open_course_confirm"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/dp10"
+                android:textSize="@dimen/sp24" />
+
+            <ImageView
+                android:id="@+id/iv_course_pic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200"
+                android:layout_marginTop="@dimen/dp10"
+                tools:src="@mipmap/main_bg" />
+
+            <TextView
+                android:id="@+id/tv_course_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp15"
+                android:lines="2"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp24"
+                android:textStyle="bold"
+                tools:text="新旅客" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:text="时长："
+                    android:textColor="@color/common_grey"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:text="@string/course_time_minute"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:text="强度："
+                    android:textColor="@color/common_grey"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="@dimen/dp80"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18"
+                    tools:text="高级" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.jkcq.hrwtv.wu.newversion.view.ChangeBtnView
+                    android:id="@+id/cbtn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:nextFocusRight="@id/cbtn_sure"
+                    app:defaultBackground="@drawable/shape_layout_selected_white_bg"
+                    app:defaultText="取消"
+                    app:defaultTextColor="@color/common_text_color"
+                    app:defaultTextSize="@dimen/sp20"
+                    app:selectBackground="@drawable/shape_cbtn_selected_bg"
+                    app:selectTextColor="@color/white"
+                    app:showType="2" />
+
+                <com.jkcq.hrwtv.wu.newversion.view.ChangeBtnView
+                    android:id="@+id/cbtn_sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp60"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:nextFocusLeft="@id/cbtn_cancel"
+                    app:defaultBackground="@drawable/shape_layout_selected_white_bg"
+                    app:defaultText="确认"
+                    app:defaultTextColor="@color/common_text_color"
+                    app:defaultTextSize="@dimen/sp20"
+                    app:selectBackground="@drawable/shape_cbtn_selected_bg"
+                    app:selectTextColor="@color/white"
+                    app:showType="2" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

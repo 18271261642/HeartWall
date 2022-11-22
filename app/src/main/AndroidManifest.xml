@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jkcq.hrwtv">
+
+
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" /> <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.jkcq.hrw.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:name=".app.BaseApp"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppBaseTheme"
+        tools:targetApi="31">
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <meta-data android:name="ScopedStorage" android:value="true" />
+        <activity android:name=".wu.FlashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".wu.newversion.activity.CourseSelectActivity"
+            android:screenOrientation="fullSensor"/>
+
+        <activity android:name=".wu.newversion.activity.mamager.ManagerSettingActivity"/>
+        <activity android:name=".wu.newversion.activity.TestActivity" />
+        <activity android:name=".wu.newversion.activity.CourseSortActivity"/>
+        <activity
+            android:name=".wu.newversion.activity.NCourseActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity
+            android:name=".wu.newversion.activity.UserSelectActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".wu.newversion.activity.NPkActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".wu.newversion.activity.PkResultActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".wu.newversion.activity.NHallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+
+        <activity android:name="com.jkcq.hrwtv.wu.newversion.activity.NewPkActivity"/>
+
+
+        <activity android:name=".test.TestOne"/>
+
+        <service
+            android:name=".service.MyMqttService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.UserInfoMqttService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.CourseMqttService"
+            android:enabled="true"
+            android:exported="true" /> <!-- Mqtt Service -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service
+            android:name=".wu.CourseUpdateMqttService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service android:name=".service.OperateUserSnService"/>
+    </application>
+
+</manifest>

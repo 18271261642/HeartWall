@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".wu.newversion.activity.NCourseActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.jkcq.hrwtv.wu.newversion.view.PKItemView
+                android:id="@+id/red_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.jkcq.hrwtv.wu.newversion.view.PKItemView
+                android:id="@+id/red_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.jkcq.hrwtv.wu.newversion.view.PKItemView
+                android:id="@+id/blue_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="1">
+
+            <com.jkcq.hrwtv.wu.newversion.view.PKItemView
+                android:id="@+id/blue_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="1">
+
+            <com.jkcq.hrwtv.wu.newversion.view.PKItemView
+                android:id="@+id/red_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp120"
+                android:layout_weight="2"
+                android:background="@drawable/shape_btn_white_20_radio_15_bg"
+                android:paddingTop="@dimen/dp15">
+
+                <TextView
+                    android:id="@+id/tv_pk_tilte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="消耗卡路里"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15" />
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:id="@+id/tv_pk_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pk_tilte"
+                    android:layout_centerHorizontal="true"
+                    android:text="00:44:59"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_21"/>
+
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:id="@+id/tv_red_cal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view_progress"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:drawableLeft="@mipmap/icon_pk_result_red"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="42sp" />
+
+                <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                    android:id="@+id/tv_blue_cal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view_progress"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:drawableRight="@mipmap/icon_pk_result_blue"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="42sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view_progress"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/icon_vs" />
+
+                <ProgressBar
+                    android:id="@+id/view_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp15"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:layout_marginRight="@dimen/dp8"
+                    android:layout_marginBottom="@dimen/dp8"
+                    android:max="100"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/seekbar_progress_stytpe_nor" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/dp10"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="1">
+
+            <com.jkcq.hrwtv.wu.newversion.view.PKItemView
+                android:id="@+id/blue_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp15"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="1">
+
+            <com.jkcq.hrwtv.wu.newversion.view.PKItemView
+                android:id="@+id/red_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="1">
+
+            <com.jkcq.hrwtv.wu.newversion.view.PKItemView
+                android:id="@+id/red_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="1">
+
+            <com.jkcq.hrwtv.wu.newversion.view.PKItemView
+                android:id="@+id/blue_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp120"
+            android:layout_weight="1">
+
+            <com.jkcq.hrwtv.wu.newversion.view.PKItemView
+                android:id="@+id/blue_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/result_height"
+    android:layout_margin="@dimen/dp7_5"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/layout_item_top"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:background="@drawable/shape_btn_unselected_bg"
+        android:padding="@dimen/dp8">
+
+
+        <ImageView
+            android:id="@+id/iv_rank_head"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_avatar_picture" />
+
+        <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+            android:id="@+id/tv_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp5"
+            android:background="@drawable/shape_btn_unselected_bg"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/dp8"
+            android:paddingRight="@dimen/dp8"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_21" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp3"
+            android:layout_toLeftOf="@+id/iv_rank_head"
+            android:layout_toRightOf="@+id/tv_rank"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="这是一个nickName"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_weight="5"
+        android:background="@drawable/shape_btn_unselected_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp8"
+        android:paddingRight="@dimen/dp8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp8">
+
+            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                android:id="@+id/tv_cal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="666"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_21" />
+
+            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                android:id="@+id/tv_match"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="98%"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_21" />
+
+            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                android:id="@+id/tv_point"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="777"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_21" />
+
+
+            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                android:id="@+id/tv_heart_strength"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_21"
+                tools:text="88%" />
+
+
+            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                android:id="@+id/tv_hr"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_21"
+                tools:text="88" />
+
+        </LinearLayout>
+
+        <com.jkcq.hrwtv.wu.newversion.view.CourseMatchView
+            android:id="@+id/heart_strenght_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp8" />
+
+    </LinearLayout>
+
+</LinearLayout>

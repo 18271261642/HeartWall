@@ -1,0 +1,32 @@
+{
+  "courseId": 1,
+  "time": 9,
+  "point": 64,
+  "courseName": "有氧运动",
+  "isDelete": false,
+  "units": [
+    {
+      "courseUnitId": 1,
+      "duration": 4,
+      "heartRange": "RANGE2",
+      "sequence": 1,
+      "range": 2
+    },
+    {
+      "courseUnitId": 4,
+      "duration": 3,
+      "heartRange": "RANGE3",
+      "sequence": 4,
+      "range": 3
+    },
+    {
+      "courseUnitId": 5,
+      "duration": 2,
+      "heartRange": "RANGE2",
+      "sequence": 5,
+      "range": 2
+    }
+
+  ],
+  "delete": false
+}
