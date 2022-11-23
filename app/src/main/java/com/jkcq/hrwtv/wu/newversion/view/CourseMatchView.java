@@ -164,7 +164,7 @@ public class CourseMatchView extends View {
                 mPaint.setColor(colors.get(6));
             }
             left = right;
-            Log.e("drawPointerView", "cousreMatchView--------------" + mWidth + "left=" + rect.left + ",right=" + rect.right + "mWidth=" + mWidth + "start" + mDatas.get(i).getBegin() + ",end=" + mDatas.get(i).getEnd() + ",type=" + type + ",mTotalSecond=" + mTotalSecond);
+        //    Log.e("drawPointerView", "cousreMatchView--------------" + mWidth + "left=" + rect.left + ",right=" + rect.right + "mWidth=" + mWidth + "start" + mDatas.get(i).getBegin() + ",end=" + mDatas.get(i).getEnd() + ",type=" + type + ",mTotalSecond=" + mTotalSecond);
             canvas.drawRect(rect, mPaint);
 
         }
@@ -183,7 +183,7 @@ public class CourseMatchView extends View {
             mBitmapHeight = mBitmap.getHeight();
         }
         float left = mTarget * mWidth / mTotalSecond;
-        canvas.drawBitmap(mBitmap, left - mBitmapWidth / 2, mHeight - mRealViewHeight - mBitmapHeight, mLinePaint);
+        canvas.drawBitmap(mBitmap, left - mBitmapWidth , mHeight - mRealViewHeight - mBitmapHeight, mLinePaint);
         canvas.drawLine(left, mHeight - mRealViewHeight, left, mHeight, mLinePaint);
     }
 

@@ -96,7 +96,7 @@ public class CourseMatchPointView extends View {
             }*/
             Log.e("drawPointerView", "drawPointerView---------------- left=" + left + "mWidth=" + mWidth);
             //  Log.e("drawPointerView", "courseMatchPoint--------------" + mWidth + "left=" + left + "mTarget=" + mTarget);
-            mLinePaint.getTextBounds("00:00", 0, strTime.length(), rect);
+            mLinePaint.getTextBounds(mTotalSecond>=3600 ? "00:00:00" : "00:00", 0, strTime.length(), rect);
             canvas.drawText(strTime, left - (rect.right - rect.left) / 2, mHeight - DisplayUtils.dip2px(mContext, 5), mLinePaint);
             //mpathd的起始位置
             mpath.moveTo(left - (rect.right - rect.left) / 2 + (rect.right - rect.left) / 2 - DisplayUtils.dip2px(mContext, 2), mHeight - DisplayUtils.dip2px(mContext, 2));

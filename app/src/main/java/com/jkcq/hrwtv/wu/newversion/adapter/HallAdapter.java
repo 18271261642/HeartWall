@@ -112,7 +112,7 @@ public class HallAdapter extends RecyclerView.Adapter<HallAdapter.MyViewHolder> 
             setImaveScale(holder.iv_hr, holder.iv_cal, holder.iv_point, isCard1);
             AdapterUtil.setItemBg(holder.l_layout, Integer.parseInt(info.getPrecent()), mContext, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.dp8), holder.iv_current_stren, isCard1);
             long currenttime = System.currentTimeMillis();
-            Log.e("jionTime", "(currenttime - info.getJoinTime()) / 1000" + (currenttime - info.getJoinTime()) / 1000 + ",UserContans.couserTime=" + UserContans.couserTime + "CacheDataUtil.mCurrentRange=" + CacheDataUtil.mCurrentRange);
+//            Log.e("jionTime", "(currenttime - info.getJoinTime()) / 1000" + (currenttime - info.getJoinTime()) / 1000 + ",UserContans.couserTime=" + UserContans.couserTime + "CacheDataUtil.mCurrentRange=" + CacheDataUtil.mCurrentRange);
             if (CacheDataUtil.mCurrentRange > 5) {
                 holder.tv_time.setText(TimeUtil.getHallTime(info.getJoinTime()));
             } else {
@@ -127,7 +127,7 @@ public class HallAdapter extends RecyclerView.Adapter<HallAdapter.MyViewHolder> 
             setMatchPercent(holder, info);
             holder.hrStageView.setToalSecend(info.getCourseTime());
 
-
+            Timber.e("-----------HallAdapter="+CacheDataUtil.mCurrentRange);
 
             if (CacheDataUtil.mCurrentRange > 5) {
                 holder.hrStageView.setValue(info.getmDatas(), false);

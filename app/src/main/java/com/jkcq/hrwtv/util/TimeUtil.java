@@ -170,6 +170,7 @@ public class TimeUtil {
         // 时显示两位
         String strHour = ("00" + hour).substring(("00" + hour).length() - 2);
         return strHour + ":" + strMinute + ":" + strSecond;
+
     }
 
     /**
@@ -180,15 +181,24 @@ public class TimeUtil {
      */
     public static String getFormatTimemmss(long time) {
         time = time / 1000;
-        long second = time % 60;
-        long minute = (time % 3600) / 60;
-        // 毫秒秒显示两位
-        // String strMillisecond = "" + (millisecond / 10);
-        // 秒显示两位
-        String strSecond = ("00" + second).substring(("00" + second).length() - 2);
-        // 分显示两位
-        String strMinute = ("00" + minute).substring(("00" + minute).length() - 2);
-        return strMinute + ":" + strSecond;
+//        long minute = (time % 3600) / 60;
+//        long second = time % 60;
+//        // 毫秒秒显示两位
+//        // String strMillisecond = "" + (millisecond / 10);
+//        // 秒显示两位
+//        String strSecond = ("00" + second).substring(("00" + second).length() - 2);
+//        // 分显示两位
+//        String strMinute = ("00" + minute).substring(("00" + minute).length() - 2);
+//        return strMinute + ":" + strSecond;
+
+        int hour = (int) (time / 3600);
+        int minute = (int) ((time - hour * 3600) / 60);
+        int seconds = (int) (time % 60);
+
+        String hourStr = hour==0 ? "":(hour+":");
+        String minuteStr = minute == 0 ? "00:" : (String.format("%02d",minute)+":");
+
+        return hourStr+minuteStr+String.format("%02d",seconds);
     }
 
     /**

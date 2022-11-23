@@ -1,11 +1,12 @@
 package com.jkcq.hrwtv.wu.newversion.activity
 
-import androidx.recyclerview.widget.LinearLayoutManager
+
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.jkcq.hrwtv.R
 import com.jkcq.hrwtv.adapter.PKResultAdapter
 import com.jkcq.hrwtv.base.mvp.BaseMVPActivity
@@ -27,6 +28,9 @@ import kotlinx.android.synthetic.main.include_head_course_sort.*
 import java.util.*
 import java.util.concurrent.CopyOnWriteArrayList
 
+/**
+ * PK结果页面
+ */
 class PkResultActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter>(),
     CourseResultView, View.OnFocusChangeListener {
 
@@ -45,7 +49,7 @@ class PkResultActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter
     }
 
 
-    fun winTeam(wingroup: Int) {
+    private fun winTeam(wingroup: Int) {
         var cal = ""
         var tem = "红队"
         var winTeam = Constant.MODE_PK_BLUE
@@ -89,7 +93,7 @@ class PkResultActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter
         }
     }
 
-    fun lowerTeam(wingroup: Int) {
+   private fun lowerTeam(wingroup: Int) {
         var cal = ""
         var tem = "红队"
         var winTeam = Constant.MODE_PK_BLUE
@@ -153,7 +157,7 @@ class PkResultActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter
             lowerTeam(Constant.PK_RED)
         }
         rv_sort_result.layoutManager =
-            androidx.recyclerview.widget.LinearLayoutManager(this)
+            LinearLayoutManager(this)
 
         mAdapter = PKResultAdapter(this, data)
         rv_sort_result.adapter = mAdapter

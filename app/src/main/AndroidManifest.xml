@@ -90,6 +90,9 @@
         <activity android:name="com.jkcq.hrwtv.wu.newversion.activity.NewPkActivity"/>
 
 
+        <activity android:name=".wu.newversion.activity.NewSortActivity"/>
+
+
         <activity android:name=".test.TestOne"/>
 
         <service

@@ -36,6 +36,7 @@ import kotlinx.android.synthetic.main.layout_heartresult_view.*
 import kotlinx.android.synthetic.main.ninclude_title.*
 import okhttp3.MediaType
 import okhttp3.RequestBody
+import timber.log.Timber
 import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentLinkedQueue
@@ -150,7 +151,9 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
     override fun uploadAllDataSuccess() {
         BaseApp.recordHashData.clear()
         //跳转到结果页面
-        startActivity(Intent(this, CourseSortActivity::class.java))
+       // startActivity(Intent(this, CourseSortActivity::class.java))
+
+        startActivity(Intent(this,NewSortActivity::class.java))
         finish()
     }
 
@@ -201,7 +204,7 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
         }, "本次课程时间过短，退出将不保存运动数据").show()
     }
 
-    fun showDialog() {
+    private fun showDialog() {
         DialogYesOrNo(this, object : DialogYesOrNo.OnButtonClick {
             override fun onButtonClickCancel() {
                 UserContans.isPause = false
@@ -215,7 +218,7 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
         }, "确认结束课程？").show()
     }
 
-    fun back() {
+    private fun back() {
         var toalTime = mCurrentHeartRateClassInfo.duration * 1000L
         if (toalTime - mRemainTime <= toalTime * 0.1) {
             showNoupdate()
@@ -227,7 +230,7 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
 
     var endTime = System.currentTimeMillis()
 
-    fun upgradeCourseData() {
+    private fun upgradeCourseData() {
 
         Logger.e("upgradeCourseData--------------------------------------")
         if (endTime != 0L) {
@@ -248,7 +251,6 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
             "1",
             endTime
         )
-
 
     }
 
@@ -276,7 +278,7 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
     }
 
 
-    fun restartCourse() {
+    private fun restartCourse() {
         var list = CacheDataUtil.getCourseUserList()
         if (list != null && list.size > 0) {
             mDataShowBeans.addAll(list)
@@ -430,7 +432,7 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
                     dataShowBean!!.setAllHrList(heartRate)
 
                     //计算每一分钟的数据 60已改为30
-                    if (dataShowBean!!.allHrList.size == 30 / Constant.REFRESH_RATE) {
+                    if (dataShowBean!!.allHrList.size == 10 / Constant.REFRESH_RATE) {
                         dataShowBean!!.calAllHrList = dataShowBean!!.allHrList
                         dataShowBean!!.allHrList.clear()
                         var minHr = 0
@@ -501,9 +503,31 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
                         HeartRateConvertUtils.getMaxHeartRate(age).toDouble()
                     ).toInt()
                     dataShowBean!!.addStageHeart(key,precent2)
-                    BaseApp.recordHashData[key]?.let { it1 -> dataShowBean!!.allHrList.addAll(it1.allHrList) }
 
                     val courseList = BaseApp.recordHashData[key]?.getmDatas()
+                    Timber.e("-----课程集合="+Gson().toJson(courseList))
+                    if (courseList != null) {
+                        BaseApp.recordHashData[key]?.let { it1 ->
+                            val originalList = it1.allHrList
+
+                            /**
+                             * 判断间隔，即从下线时间到现在的间隔
+                             */
+                            val dropInterval = System.currentTimeMillis()- heartRateBean!!.time
+
+
+                            val repairTime = dropInterval / 1000
+
+                            Timber.e("---------下线的间隔时间长="+repairTime)
+                            for(i in 0 until  repairTime){
+                                originalList.add(32)
+                            }
+                            dataShowBean!!.allHrList.addAll(originalList)
+
+                            courseList.add(CourseDetail(0, repairTime.toInt(),-1))
+                        }
+                    }
+
                     dataShowBean!!.setmDatas(courseList)
 
                     //经验值
@@ -523,6 +547,27 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
                     ).toInt().toString()
                     dataShowBean!!.addStageHeart(key, 0)
 
+                    var joinTime : Long ?= null
+                    if(BaseApp.recordHashData.size>0){
+                        BaseApp.recordHashData.forEach {
+                            joinTime = it.value.joinTime
+                        }
+                    }
+
+                    if(joinTime != null){
+                        dataShowBean!!.joinTime = joinTime
+
+                        /**
+                         * 判断间隔，即从下线时间到现在的间隔
+                         */
+                        val dropInterval =  System.currentTimeMillis() - joinTime!!
+
+                        Timber.e("-------dropINer="+dropInterval)
+                        val tempCourList = mutableListOf<CourseDetail>()
+                        tempCourList.add(CourseDetail(0, (dropInterval/1000).toInt(),-1))
+                        dataShowBean!!.setmDatas(tempCourList)
+                    }
+
                 }
 
 
@@ -538,6 +583,7 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
                 }
                 dataShowBean!!.liveHeartRate = heartRate
                 dataShowBean!!.devicesSN = key
+
 
 
                 //保存SN
@@ -579,12 +625,9 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
     @SuppressLint("LongLogTag")
     private fun doCommonHRTask(sources: ConcurrentHashMap<String, Int>) {
 
-
         var isRecord = BaseApp.recordHashData.isNotEmpty()
 
-
         sources.forEach {
-            Logger.e(tags, "doCommonHRTask$sn")
             sn = it.key
             hrValue = it.value
             if (!UserContans.userInfoHashMap.containsKey(sn)) {
@@ -679,8 +722,7 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
                 }
             }
             //如果两分钟没有数据，就把sn值的
-            Logger.e("drop", "currentTime - time=" + (currentTime - time))
-
+            Timber.e("------------掉线去除时间="+(currentTime - time))
             if (UserContans.userInfoHashMap.containsKey(sn)) {
                 if (!UserContans.userInfoHashMap.get(sn)!!.isSelect ) {
                     isRemove = true
@@ -703,10 +745,12 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
         }
     }
 
-    fun showCourseModel() {
+    private fun showCourseModel() {
         if(UserContans.info == null)
             return
         mCurrentHeartRateClassInfo = UserContans.info
+
+
         UserContans.couserTime = mCurrentHeartRateClassInfo.duration
         tv_course_name.text = mCurrentHeartRateClassInfo.courseName
         tv_course_leve.text =
@@ -738,7 +782,7 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
 //        coursematch_view.moveArrow()
     }
 
-    fun starCourse() {
+    private fun starCourse() {
         mRemainTime = mCurrentHeartRateClassInfo.duration * 1000
         startDownTimer()
     }
@@ -756,15 +800,14 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
     inner class CourseDownTimer(var millisInFuture: Long, countDownInterval: Long) :
         CountDownTimer(millisInFuture, countDownInterval) {
         override fun onFinish() {
-            LogUtil.e("onFinish=" + ",isPase" + UserContans.isPause + "mRemainTime / 1000" + mRemainTime / 1000)
+            LogUtil.e("onFinish=" + ",isPase" + UserContans.isPause + "  mRemainTime / 1000=" + (mRemainTime / 1000))
 
             endTime = System.currentTimeMillis()
 
-            if (mRemainTime / 1000 == 0) {
+            if (mRemainTime / 1000 <= 0) {
                 //把数据清零
                 doHallModel(UserContans.mSnHrMap)
             }
-
 
             autoDialogView = ShowEmptyDialog(instance)
             autoDialogView!!.show()
@@ -811,16 +854,21 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
 
                 }
             }
-            if (millisUntilFinished / 1000 != 0L) {
-                updateCourseView(millisUntilFinished)
-            }
 
+            Timber.e("--------时间="+(millisUntilFinished / 1000))
+
+            updateCourseView(millisUntilFinished)
+
+            if(millisUntilFinished/1000<=1) {
+                coursematchpoint_view.moveArrow(0L)
+            }
         }
 
     }
 
 
     private fun removeview(moveTime: Int) {
+
         coursematchpoint_view.setStrTime(TimeUtil.getFormatTimemmss(moveTime * 1000L))
         //  coursematchpoint_view.moveArrow((mRemainTime / 1000).toLong())
     }
@@ -832,7 +880,7 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
 
         mCurrentDownTimer =
             CourseDownTimer(
-                (mCurrentHeartRateClassInfo.duration + 1 - (mCurrentHeartRateClassInfo.duration * 1000 - mRemainTime) / 1000L) * 1000L+500,
+                (mCurrentHeartRateClassInfo.duration - (mCurrentHeartRateClassInfo.duration * 1000 - mRemainTime) / 1000L) * 1000L,
                 mDuration
             )
         mCurrentDownTimer?.start()
@@ -842,7 +890,7 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
     private fun startDownTimer() {
         mCurrentDownTimer =
             CourseDownTimer(
-                (mCurrentHeartRateClassInfo.duration + 1) * 1000L+500,
+                (mCurrentHeartRateClassInfo.duration ) * 1000L,
                 mDuration
             )
         mCurrentDownTimer?.start()

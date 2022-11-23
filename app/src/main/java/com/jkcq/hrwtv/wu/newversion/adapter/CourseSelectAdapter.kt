@@ -120,7 +120,7 @@ class CourseSelectAdapter(
                 }
             }
 
-            var intent = Intent(mContext, UserSelectActivity::class.java)
+            val intent = Intent(mContext, UserSelectActivity::class.java)
             intent.putExtra("firstCome", true)
             if (isPk) {
                 intent.putExtra("currentMode", Constant.MODE_PK_RED)

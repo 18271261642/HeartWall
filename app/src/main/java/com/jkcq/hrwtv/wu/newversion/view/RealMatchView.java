@@ -12,15 +12,19 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
+import com.google.gson.Gson;
 import com.jkcq.hrwtv.R;
 import com.jkcq.hrwtv.configure.Constant;
 import com.jkcq.hrwtv.http.bean.CourseDetail;
 import com.jkcq.hrwtv.service.UserContans;
 
+import java.lang.reflect.GenericSignatureFormatError;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+
+import timber.log.Timber;
 
 public class RealMatchView extends View {
     private Context mContext;
@@ -114,9 +118,17 @@ public class RealMatchView extends View {
         }
         for (int i = 0; i < mDatas.size(); i++) {
             courseDetail = mDatas.get(i);
+
+            Timber.e("-------courseDetial="+new Gson().toJson(courseDetail));
+
             float topV = courseDetail.getEnd() * mHeight;
+//            bottom = mRealViewHeight - courseDetail.getBegin() * mHeight / mTotalSecond;
+//            top = mRealViewHeight - topV  >=mTotalSecond ? mTotalSecond+=mTotalSecond : mTotalSecond;
+
+
             bottom = mRealViewHeight - courseDetail.getBegin() * mHeight / mTotalSecond;
-            top = mRealViewHeight - topV / topV >=mTotalSecond ? mTotalSecond+=mTotalSecond : mTotalSecond;
+            top = mRealViewHeight - courseDetail.getEnd() * mHeight / mTotalSecond;
+
             rect.left = left;
             rect.top = top;
             rect.right = right;
@@ -162,6 +174,7 @@ public class RealMatchView extends View {
     }
 
     public void setValue(List<CourseDetail> mDatas, boolean isCourse) {
+        Timber.e("--------setValue="+isCourse+" "+UserContans.couserTime);
         if (isCourse) {
             this.mTotalSecond = UserContans.couserTime / Constant.REFRESH_RATE;
         } else {

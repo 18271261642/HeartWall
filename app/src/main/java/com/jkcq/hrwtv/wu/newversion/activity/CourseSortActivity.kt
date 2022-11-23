@@ -2,6 +2,7 @@ package com.jkcq.hrwtv.wu.newversion.activity
 
 import android.annotation.SuppressLint
 import android.os.Build
+import android.os.Environment
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.View
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.google.gson.Gson
 import com.jkcq.hrwtv.R
 import com.jkcq.hrwtv.base.mvp.BaseMVPActivity
 import com.jkcq.hrwtv.eventBean.EventConstant
@@ -19,6 +21,7 @@ import com.jkcq.hrwtv.heartrate.presenter.MainActivityPresenter
 import com.jkcq.hrwtv.http.bean.CourseInfo
 import com.jkcq.hrwtv.service.UserContans
 import com.jkcq.hrwtv.util.CacheDataUtil
+import com.jkcq.hrwtv.util.GetJsonDataUtil
 import com.jkcq.hrwtv.util.LogUtil
 import com.jkcq.hrwtv.util.TimeUtil
 import com.jkcq.hrwtv.wu.manager.Preference
@@ -60,9 +63,15 @@ class CourseSortActivity : BaseMVPActivity<MainActivityView, MainActivityPresent
         rl_img_back.setOnClickListener {
             finish()
         }
+
+
+
         mDataShowBeans.addAll(CacheDataUtil.sUploadHeartData)
         rv_sort_result.layoutManager =
             LinearLayoutManager(this)
+//        mDataShowBeans.sortWith(compareBy<DevicesDataShowBean?>({ it?.point },{ it?.age }).reversed())
+
+
         mAdapter = CourseResultAdapter(this, mDataShowBeans)
         rv_sort_result.adapter = mAdapter
 
@@ -372,6 +381,8 @@ class CourseSortActivity : BaseMVPActivity<MainActivityView, MainActivityPresent
 
             Timber.e("--------排序="+devicesDataShowBean.devicesSN+" "+devicesDataShowBean.point+" 卡路里="+devicesDataShowBean.cal)
         }
+        val filePath = Environment.getExternalStorageDirectory().path+"/"+"DCIM/"
+        GetJsonDataUtil().writeTxtToFile(Gson().toJson(mDataShowBeans),filePath,sortType.toString()+"wall.json")
         mAdapter.notifyDataSetChanged()
     }
 

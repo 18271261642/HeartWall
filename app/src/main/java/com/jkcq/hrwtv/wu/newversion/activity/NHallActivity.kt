@@ -345,7 +345,7 @@ class NHallActivity : AbsNewHeartResultActivity(), MainActivityView {
                      * 计算每一分钟的数据 60  改成30S计算一次
                      */
 
-                    if (dataShowBean!!.allHrList.size == 30 / Constant.REFRESH_RATE) {
+                    if (dataShowBean!!.allHrList.size == 10 / Constant.REFRESH_RATE) {
                         dataShowBean!!.calAllHrList = dataShowBean!!.allHrList
                         dataShowBean!!.allHrList.clear()
                         var minHr = 0

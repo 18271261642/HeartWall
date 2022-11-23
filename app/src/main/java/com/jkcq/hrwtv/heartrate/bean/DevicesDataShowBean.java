@@ -350,7 +350,7 @@ public class DevicesDataShowBean implements Comparable {
 
         int tempPoint = 0;
         if (hearStrength == -1) {
-            tempPoint = -1;
+            tempPoint = 0;
         } else if (hearStrength < 50) {
             tempPoint = 0;
         } else if (hearStrength >= 50 && hearStrength < 60) {

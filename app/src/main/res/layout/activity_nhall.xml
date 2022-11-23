@@ -67,7 +67,7 @@
             </LinearLayout>
 
             <View
-                android:layout_width="@dimen/dp15"
+                android:layout_width="@dimen/dp10"
                 android:layout_height="1dp" />
 
             <LinearLayout
@@ -108,7 +108,7 @@
             </LinearLayout>
 
             <View
-                android:layout_width="@dimen/dp15"
+                android:layout_width="@dimen/dp10"
                 android:layout_height="1dp" />
 
             <LinearLayout
@@ -150,7 +150,7 @@
             </LinearLayout>
 
             <View
-                android:layout_width="@dimen/dp15"
+                android:layout_width="@dimen/dp10"
                 android:layout_height="1dp" />
 
             <LinearLayout
@@ -190,7 +190,7 @@
             </LinearLayout>
 
             <View
-                android:layout_width="@dimen/dp15"
+                android:layout_width="@dimen/dp10"
                 android:layout_height="1dp" />
 
             <LinearLayout
@@ -233,7 +233,7 @@
             </LinearLayout>
 
             <View
-                android:layout_width="@dimen/dp15"
+                android:layout_width="@dimen/dp10"
                 android:layout_height="1dp" />
 
             <LinearLayout

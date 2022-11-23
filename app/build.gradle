@@ -99,8 +99,8 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
-    implementation 'com.squareup.leakcanary:leakcanary-android:2.10'
-    implementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+//    implementation 'com.squareup.leakcanary:leakcanary-android:2.10'
+//    implementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
 //    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
 //    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
 //    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'

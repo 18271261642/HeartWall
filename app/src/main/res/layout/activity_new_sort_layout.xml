@@ -115,7 +115,8 @@
             android:layout_height="@dimen/dp45"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:focusable="true"
+            android:focusable="false"
+            android:visibility="gone"
             android:focusableInTouchMode="true"
             android:gravity="center"
             android:orientation="horizontal">
@@ -200,15 +201,13 @@
 
 
 
-            <com.jkcq.hrwtv.wu.newversion.view.tvrecyclerview.TvRecyclerView
-                android:id="@+id/rv_sort_result"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scrollbars="vertical"
-                app:focusScale="1.1"
-                app:isAutoProcessFocus="false"
-                app:scrollMode="followScroll"
-                tools:listitem="@layout/item_course_sort"/>
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/newSortRecyclerView"
+               android:layout_width="match_parent"
+               android:focusable="true"
+               android:layout_height="wrap_content"
+               app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+               tools:listitem="@layout/item_course_sort"/>
         </LinearLayout>
 
         <LinearLayout

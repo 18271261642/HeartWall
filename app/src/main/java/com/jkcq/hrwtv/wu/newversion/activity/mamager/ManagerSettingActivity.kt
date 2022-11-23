@@ -250,7 +250,7 @@ class ManagerSettingActivity : AppCompatActivity(), ManagerMainView,
 
     override fun onCheckUpdateSuccess(versionBean: VersionInfo) {
         val currentCode = AppUtils.getAppVersionCode()
-        if (versionBean.appVersionCode == currentCode) {
+        if (versionBean.appVersionCode > currentCode && versionBean.isFocusUpdate) {
 
             var str = "是否更新到最新版本固件" + versionBean.appVersionName + "?\n" + getString(
                 com.jkcq.managersetting.R.string.app_version,

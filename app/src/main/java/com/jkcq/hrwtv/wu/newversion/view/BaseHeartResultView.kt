@@ -24,6 +24,7 @@ import jp.wasabeef.recyclerview.animators.ScaleInAnimator
 import kotlinx.android.synthetic.main.include_nodevice.view.*
 import kotlinx.android.synthetic.main.layout_heartresult_view.view.*
 import org.greenrobot.eventbus.EventBus
+import timber.log.Timber
 import java.util.concurrent.CopyOnWriteArrayList
 
 open class BaseHeartResultView : RelativeLayout {
@@ -74,10 +75,9 @@ open class BaseHeartResultView : RelativeLayout {
 
     fun initView() {
         setStateData()
-
-        Log.e("initView ", " mSpanCount =" + mSpanCount)
-        var layoutManager =
-            androidx.recyclerview.widget.GridLayoutManager(context, mSpanCount)
+        Timber.e("------- mSpanCount ="+ mSpanCount)
+        val layoutManager =
+            GridLayoutManager(context, mSpanCount)
         if (mShowType == SHOW_TYPE_HALL) {
             layoutManager.spanSizeLookup = object : androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup() {
                 override fun getSpanSize(position: Int): Int {
@@ -181,7 +181,7 @@ open class BaseHeartResultView : RelativeLayout {
         mPageCournt = 12
     }
 
-    open fun setAdapter(recyclerView: androidx.recyclerview.widget.RecyclerView) {
+    open fun setAdapter(recyclerView: RecyclerView) {
         recyclerview_hall.adapter = HallAdapter(mContext, mShowHeartRateData);
     }
 

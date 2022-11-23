@@ -71,7 +71,7 @@ class CourseHeartResultView : BaseHeartResultView {
             }
         }
         CacheDataUtil.saveCourseUserBean(mShowHeartRateData)
-
+        mAdapter?.notifyDataSetChanged()
     }
 
     fun insertItem(data: DevicesDataShowBean?, position: Int = 0) {

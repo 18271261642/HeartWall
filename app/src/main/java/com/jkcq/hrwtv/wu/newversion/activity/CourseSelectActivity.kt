@@ -157,7 +157,10 @@ class CourseSelectActivity : AppCompatActivity() {
             fl_back.setOnClickListener {
                 finish()
             }
-            fl_back.requestFocus()
+            if(fl_back!=null){
+                fl_back.requestFocus()
+            }
+
         }catch (e : Exception){
             e.printStackTrace()
         }
