@@ -75,25 +75,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp8">
 
-            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
-                android:id="@+id/tv_cal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="666"
-                android:textColor="@color/white"
-                android:textSize="@dimen/size_21" />
-
-            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
-                android:id="@+id/tv_match"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="98%"
-                android:textColor="@color/white"
-                android:textSize="@dimen/size_21" />
 
             <com.jkcq.hrwtv.ui.view.BebasNeueTextView
                 android:id="@+id/tv_point"
@@ -106,15 +87,27 @@
                 android:textSize="@dimen/size_21" />
 
 
+
             <com.jkcq.hrwtv.ui.view.BebasNeueTextView
-                android:id="@+id/tv_heart_strength"
+                android:id="@+id/tv_match"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:text="98%"
                 android:textColor="@color/white"
-                android:textSize="@dimen/size_21"
-                tools:text="88%" />
+                android:textSize="@dimen/size_21" />
+
+
+            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                android:id="@+id/tv_cal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="666"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_21" />
 
 
             <com.jkcq.hrwtv.ui.view.BebasNeueTextView
@@ -126,6 +119,19 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/size_21"
                 tools:text="88" />
+
+            <com.jkcq.hrwtv.ui.view.BebasNeueTextView
+                android:id="@+id/tv_heart_strength"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_21"
+                tools:text="88%" />
+
+
+
 
         </LinearLayout>
 

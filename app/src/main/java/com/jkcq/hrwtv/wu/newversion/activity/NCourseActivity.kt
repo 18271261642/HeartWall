@@ -505,11 +505,11 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
                     dataShowBean!!.addStageHeart(key,precent2)
 
                     val courseList = BaseApp.recordHashData[key]?.getmDatas()
-                    Timber.e("-----课程集合="+Gson().toJson(courseList))
+                    //Timber.e("-----课程集合="+Gson().toJson(courseList))
                     if (courseList != null) {
                         BaseApp.recordHashData[key]?.let { it1 ->
                             val originalList = it1.allHrList
-
+                           // Timber.e("---------掉线上线心率集合大小="+originalList.size+" "+heartRateBean!!.time+" "+it1.joinTime+" "+it1.time)
                             /**
                              * 判断间隔，即从下线时间到现在的间隔
                              */
@@ -524,7 +524,8 @@ class NCourseActivity : AbsNewHeartResultActivity(), MainActivityView {
                             }
                             dataShowBean!!.allHrList.addAll(originalList)
 
-                            courseList.add(CourseDetail(0, repairTime.toInt(),-1))
+                            val end = courseList.get(courseList.size-1).end
+                            courseList.add(CourseDetail(end, repairTime.toInt(),-1))
                         }
                     }
 

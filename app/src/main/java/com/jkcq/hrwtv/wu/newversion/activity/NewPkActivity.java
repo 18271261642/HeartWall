@@ -40,6 +40,7 @@ import com.jkcq.hrwtv.util.DoubleClickUtil;
 import com.jkcq.hrwtv.util.HeartRateConvertUtils;
 import com.jkcq.hrwtv.util.Logger;
 import com.jkcq.hrwtv.util.TimeUtil;
+import com.jkcq.hrwtv.wu.newversion.NewPagingScrollHelper;
 import com.jkcq.hrwtv.wu.newversion.view.CourseMatchPointView;
 import com.jkcq.hrwtv.wu.newversion.view.CourseMatchView;
 import com.jkcq.hrwtv.wu.newversion.view.HeartResultView;
@@ -131,6 +132,11 @@ public class NewPkActivity extends BaseMVPActivity<MainActivityView, MainActivit
     private int mCurrentRemoveIndex = 0;
     private boolean isAddItem = false;
 
+
+    //自动滚动
+    private NewPagingScrollHelper scrollHelper;
+
+
     private List<Integer> reMoveList = new ArrayList<>();
 
     private final Handler handler = new Handler(Looper.getMainLooper()){
@@ -221,6 +227,8 @@ public class NewPkActivity extends BaseMVPActivity<MainActivityView, MainActivit
 
 
     private void timerScroll() {
+        scrollHelper = new NewPagingScrollHelper();
+        scrollHelper.setSeparate(2);
 
     }
 
@@ -829,10 +837,15 @@ public class NewPkActivity extends BaseMVPActivity<MainActivityView, MainActivit
             for (int i = 0; i < mDataShowBeans.size(); i++) {
                 DevicesDataShowBean dropBean = mDataShowBeans.get(i);
                 if (dropBean.getPkTeam() == Constant.MODE_PK_RED) {
-                    redSumCal += dropBean.getCal();
+                   // redSumCal += dropBean.getCal();
+
+                    int tempRedPoint = (int) dropBean.getPoint();
+                    redSumCal+=tempRedPoint;
                     mRedDataShowBeans.add(dropBean);
                 } else {
-                    blueSumCal += dropBean.getCal();
+                    int tempBlePoint = (int) dropBean.getPoint();
+                    blueSumCal +=tempBlePoint;
+                   // blueSumCal += dropBean.getCal();
                     mBlueDataShowBeans.add(dropBean);
                 }
 

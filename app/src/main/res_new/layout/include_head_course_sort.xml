@@ -28,14 +28,19 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="@dimen/dp10"
             android:layout_weight="1"
             android:background="@drawable/shape_btn_unselected_bg"
             android:gravity="center"
-            android:text="@string/title_cal"
+            android:text="@string/point_count"
             android:textColor="@color/white"
             android:textSize="@dimen/sp15"
             android:textStyle="bold" />
+
+        <View
+            android:layout_width="@dimen/dp10"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"/>
+
 
         <TextView
             android:id="@+id/tv_title_match"
@@ -53,10 +58,24 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp10"
             android:layout_weight="1"
             android:background="@drawable/shape_btn_unselected_bg"
             android:gravity="center"
-            android:text="@string/point_count"
+            android:text="@string/title_cal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btn_unselected_bg"
+            android:gravity="center"
+            android:text="@string/average_hr"
             android:textColor="@color/white"
             android:textSize="@dimen/sp15"
             android:textStyle="bold" />
@@ -64,13 +83,7 @@
         <View
             android:layout_width="@dimen/dp10"
             android:layout_height="match_parent"
-            android:background="@color/transparent"></View>
-
-
-        <View
-            android:layout_width="@dimen/dp10"
-            android:layout_height="match_parent"
-            android:background="@color/transparent"></View>
+            android:background="@color/transparent"/>
 
         <TextView
             android:layout_width="0dp"
@@ -86,18 +99,8 @@
         <View
             android:layout_width="@dimen/dp10"
             android:layout_height="match_parent"
-            android:background="@color/transparent"></View>
+            android:background="@color/transparent"/>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/shape_btn_unselected_bg"
-            android:gravity="center"
-            android:text="@string/average_hr"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp15"
-            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>

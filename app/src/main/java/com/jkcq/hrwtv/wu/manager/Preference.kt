@@ -22,6 +22,9 @@ class Preference<T>(val name: String, private val default: T) {
         const val clubName = "clubName"
         const val userId = "id"
         const val nickname = "nickname"
+
+        const val course = "course"
+
         private val prefs: SharedPreferences by lazy {
             BaseApp.getApp().getSharedPreferences(file_name, Context.MODE_PRIVATE)
         }

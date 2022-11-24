@@ -29,7 +29,7 @@ class NewPkResultView : BaseHeartResultView {
     }
 
 
-    override fun setAdapter(recyclerView: androidx.recyclerview.widget.RecyclerView) {
+    override fun setAdapter(recyclerView: RecyclerView) {
         super.setAdapter(recyclerView)
         mAdapter = HallAdapter(mContext,mShowHeartRateData)
         recyclerView.adapter = mAdapter

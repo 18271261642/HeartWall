@@ -29,7 +29,6 @@ import com.jkcq.hrwtv.wu.newversion.NewPagingScrollHelper
 import com.jkcq.hrwtv.wu.newversion.adapter.CourseResultAdapter
 import com.jkcq.hrwtv.wu.newversion.adapter.CourseResultAdapterJava
 import kotlinx.android.synthetic.main.activity_course_sort.*
-import kotlinx.android.synthetic.main.activity_course_sort.tv_course_name
 import kotlinx.android.synthetic.main.include_head_course_sort.*
 import timber.log.Timber
 import java.util.*

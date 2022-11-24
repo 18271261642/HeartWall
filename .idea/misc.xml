@@ -13,8 +13,8 @@
         <entry key="..\:/Works/HeartWall/app/src/main/res/layout/activity_frame_layout.xml" value="0.21302083333333333" />
         <entry key="..\:/Works/HeartWall/app/src/main/res/layout/activity_main.xml" value="0.22708333333333333" />
         <entry key="..\:/Works/HeartWall/app/src/main/res/layout/activity_ncourse.xml" value="0.19895833333333332" />
-        <entry key="..\:/Works/HeartWall/app/src/main/res/layout/activity_new_pk_layout.xml" value="0.18489583333333334" />
-        <entry key="..\:/Works/HeartWall/app/src/main/res/layout/activity_new_sort_layout.xml" value="0.264" />
+        <entry key="..\:/Works/HeartWall/app/src/main/res/layout/activity_new_pk_layout.xml" value="0.264" />
+        <entry key="..\:/Works/HeartWall/app/src/main/res/layout/activity_new_sort_layout.xml" value="0.176" />
         <entry key="..\:/Works/HeartWall/app/src/main/res/layout/activity_nhall.xml" value="0.22708333333333333" />
         <entry key="..\:/Works/HeartWall/app/src/main/res/layout/activity_npk.xml" value="0.21302083333333333" />
         <entry key="..\:/Works/HeartWall/app/src/main/res/layout/activity_pk_content.xml" value="0.1" />
@@ -28,10 +28,12 @@
         <entry key="..\:/Works/HeartWall/app/src/main/res/layout/item_user_newcard.xml" value="0.21302083333333333" />
         <entry key="..\:/Works/HeartWall/app/src/main/res/layout/show_empty_dialog_layout.xml" value="0.19895833333333332" />
         <entry key="..\:/Works/HeartWall/app/src/main/res_new/layout/include_course_select_title.xml" value="0.18489583333333334" />
+        <entry key="..\:/Works/HeartWall/app/src/main/res_new/layout/include_head_course_sort.xml" value="0.18489583333333334" />
         <entry key="..\:/Works/HeartWall/app/src/main/res_new/layout/include_nodevice.xml" value="0.22708333333333333" />
         <entry key="..\:/Works/HeartWall/app/src/main/res_new/layout/item_course_select1.xml" value="0.21302083333333333" />
         <entry key="..\:/Works/HeartWall/app/src/main/res_new/layout/item_course_sort.xml" value="0.21302083333333333" />
         <entry key="..\:/Works/HeartWall/app/src/main/res_new/layout/item_heartrate1.xml" value="0.264" />
+        <entry key="..\:/Works/HeartWall/app/src/main/res_new/layout/item_heartrate4.xml" value="0.72" />
         <entry key="..\:/Works/HeartWall/app/src/main/res_new/layout/item_heartrate6.xml" value="0.19895833333333332" />
         <entry key="..\:/Works/HeartWall/app/src/main/res_new/layout/item_user_select.xml" value="0.21302083333333333" />
         <entry key="..\:/Works/HeartWall/app/src/main/res_new/layout/layout_course_select.xml" value="0.21302083333333333" />

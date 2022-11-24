@@ -9,24 +9,25 @@ import com.jkcq.hrwtv.heartrate.bean.DevicesDataShowBean
 import com.jkcq.hrwtv.heartrate.model.CourseResultView
 import com.jkcq.hrwtv.heartrate.model.MainActivityView
 import com.jkcq.hrwtv.heartrate.presenter.MainActivityPresenter
+import com.jkcq.hrwtv.http.bean.CourseInfo
+import com.jkcq.hrwtv.service.UserContans
 import com.jkcq.hrwtv.util.CacheDataUtil
+import com.jkcq.hrwtv.util.TimeUtil
 import com.jkcq.hrwtv.wu.manager.Preference
 import com.jkcq.hrwtv.wu.newversion.adapter.CourseResultAdapterJava
-import kotlinx.android.synthetic.main.activity_course_sort.*
 import kotlinx.android.synthetic.main.activity_new_sort_layout.*
 import kotlinx.android.synthetic.main.activity_new_sort_layout.rl_img_back
 import kotlinx.android.synthetic.main.activity_new_sort_layout.tv_cal
-import kotlinx.android.synthetic.main.activity_new_sort_layout.tv_heart_strength
-import kotlinx.android.synthetic.main.activity_new_sort_layout.tv_hr
 import kotlinx.android.synthetic.main.activity_new_sort_layout.tv_match
-import kotlinx.android.synthetic.main.activity_new_sort_layout.tv_name
 import kotlinx.android.synthetic.main.activity_new_sort_layout.tv_point
+
 import kotlinx.android.synthetic.main.include_head_course_sort.*
 import timber.log.Timber
 import java.util.*
 import kotlin.Comparator
 
 /**
+ * 课程结束排行
  * Created by Admin
  *Date 2022/11/23
  */
@@ -36,6 +37,8 @@ class NewSortActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter>
     private var adapter : CourseResultAdapterJava ?= null
     private var list = mutableListOf<DevicesDataShowBean>()
     var mclubName: String by Preference(Preference.clubName, "")
+
+    var course : String by Preference(Preference.course,"")
 
     override fun getLayoutId(): Int {
         return R.layout.activity_new_sort_layout
@@ -59,7 +62,7 @@ class NewSortActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter>
             return
         }
 
-        list.sortWith(compareBy({it.point},{it.cal}))
+        list.sortWith(compareBy({it.point},{it.matchRate},{it.cal},{it.averageHeartRate},{it.averageHeartPercent}))
      //   list.reversed()
 
         list.forEach {
@@ -128,11 +131,11 @@ class NewSortActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter>
 //
 //
 //        rv_sort_result.nextFocusUpId = R.id.tv_cal
+        tv_course_names.text = mclubName
 
+        tv_name.text = course
 
-        tv_name.text = mclubName
-
-      //  showCourseModel()
+        showCourseModel()
     }
 
     override fun createPresenter(): MainActivityPresenter {
@@ -147,5 +150,15 @@ class NewSortActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter>
 
     }
 
+    //展示课程名称，时长
+    lateinit var mCurrentHeartRateClassInfo: CourseInfo
+    private fun showCourseModel(){
+        mCurrentHeartRateClassInfo = UserContans.info
+        tv_course_names.text = mCurrentHeartRateClassInfo.courseName
+        tv_lever.text =
+            UserContans.getDifficultyLevel(mCurrentHeartRateClassInfo.difficultyLevel)
+        tv_course_time.text =
+            TimeUtil.getFormatTimeHHMMSS(mCurrentHeartRateClassInfo.duration * 1L)
+    }
 
 }

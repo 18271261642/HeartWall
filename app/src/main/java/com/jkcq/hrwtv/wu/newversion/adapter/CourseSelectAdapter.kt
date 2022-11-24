@@ -17,9 +17,11 @@ import com.jkcq.hrwtv.util.CacheDataUtil
 import com.jkcq.hrwtv.util.DisplayUtils
 import com.jkcq.hrwtv.util.LoadImageUtil
 import com.jkcq.hrwtv.util.TimeUtil
+import com.jkcq.hrwtv.wu.manager.Preference
 import com.jkcq.hrwtv.wu.newversion.activity.UserSelectActivity
 import com.jkcq.hrwtv.wu.newversion.animation.AnimationUtil
 import com.jkcq.hrwtv.wu.newversion.view.DialogFactory
+import timber.log.Timber
 
 //课程选择adapter
 class CourseSelectAdapter(
@@ -27,8 +29,11 @@ class CourseSelectAdapter(
     private var mDatas: List<CourseInfo>,
     private var isPk: Boolean
 ) :
-    androidx.recyclerview.widget.RecyclerView.Adapter<CourseSelectAdapter.MyViewHolder>() {
+    RecyclerView.Adapter<CourseSelectAdapter.MyViewHolder>() {
 
+    //var mclubName: String by Preference(Preference.clubName, "")
+
+    var courseName  : String by Preference(Preference.course,"")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
@@ -121,6 +126,8 @@ class CourseSelectAdapter(
             }
 
             val intent = Intent(mContext, UserSelectActivity::class.java)
+            courseName = info.courseName
+
             intent.putExtra("firstCome", true)
             if (isPk) {
                 intent.putExtra("currentMode", Constant.MODE_PK_RED)

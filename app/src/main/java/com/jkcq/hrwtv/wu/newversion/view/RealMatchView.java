@@ -118,9 +118,6 @@ public class RealMatchView extends View {
         }
         for (int i = 0; i < mDatas.size(); i++) {
             courseDetail = mDatas.get(i);
-
-            Timber.e("-------courseDetial="+new Gson().toJson(courseDetail));
-
             float topV = courseDetail.getEnd() * mHeight;
 //            bottom = mRealViewHeight - courseDetail.getBegin() * mHeight / mTotalSecond;
 //            top = mRealViewHeight - topV  >=mTotalSecond ? mTotalSecond+=mTotalSecond : mTotalSecond;
@@ -165,7 +162,7 @@ public class RealMatchView extends View {
      * @param canvas
      */
 
-    private int mTotalSecond = 30 * 60;
+    private int mTotalSecond =  60;
     private List<CourseDetail> mDatas = new ArrayList<>();
     private CourseDetail courseDetail;
 
@@ -174,12 +171,22 @@ public class RealMatchView extends View {
     }
 
     public void setValue(List<CourseDetail> mDatas, boolean isCourse) {
-        Timber.e("--------setValue="+isCourse+" "+UserContans.couserTime);
+
         if (isCourse) {
             this.mTotalSecond = UserContans.couserTime / Constant.REFRESH_RATE;
         } else {
+
             if (mDatas.size()>0 && mDatas.get(mDatas.size() - 1).getEnd() > mTotalSecond) {
-                mTotalSecond += (30 * 60);
+               // mTotalSecond += mTotalSecond;
+                int end = mDatas.get(mDatas.size()-1).getEnd();
+                int total = end / 60;
+                int decimal = end % 60;
+//
+//                if(decimal>0){
+//                    total = total+1;
+//                }
+                mTotalSecond =total * 60 *2;
+                Timber.e("---------setValue="+mTotalSecond+" "+end);
             } else {
                // this.mTotalSecond = 30 * 60;
             }

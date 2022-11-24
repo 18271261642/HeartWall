@@ -54,13 +54,12 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_course_name"
+            android:id="@+id/tv_course_names"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/tv_name"
             android:layout_toRightOf="@+id/tv_name"
             android:paddingLeft="@dimen/dp10"
-            android:text="深圳松岗满京华店"
             android:textColor="@color/white"
             android:textSize="@dimen/sp15"
             android:textStyle="bold" />
@@ -197,6 +196,8 @@
             android:layout_height="match_parent"
             android:layout_marginRight="@dimen/dp40"
             android:orientation="vertical">
+
+
             <include layout="@layout/include_head_course_sort"/>
 
 

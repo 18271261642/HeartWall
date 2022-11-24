@@ -32,6 +32,7 @@ import com.jkcq.hrwtv.wu.newversion.view.RealMatchView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * 大厅模式adapter
@@ -71,72 +72,73 @@ public class HallAdapter extends RecyclerView.Adapter<HallAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        DevicesDataShowBean info = mDatas.get(position);
 
-        Timber.e("-------大厅数据adapter="+info.toString());
+            DevicesDataShowBean info = mDatas.get(position);
+            Timber.e("-------大厅数据adapter="+info.toString());
 
-        size = mDatas.size();
-        if (holder != null) {
-            AdapterUtil.setVaule(holder.tv_cal, info, Constant.TYPE_CAL);
-            AdapterUtil.setVaule(holder.tv_hr, info, Constant.TYPE_HR);
-            AdapterUtil.setVaule(holder.tv_streng_value, info, Constant.TYPE_PERCENT);
-            holder.tv_name.setText(info.getNikeName());
-            //设置用户头像和昵称
-            if (info.getHeadUrl() == null) {
-                url = "";
-            } else {
-                url = info.getHeadUrl();
-            }
-            //设置背景
-            Timber.e("--------nfo.getUser().getJoinTime()="+info.getJoinTime()+" ");
-            boolean isCard1 = size <= 6;
-            if (isCard1) {
-                setCenterLayout(holder, resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_with), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_height), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_content_with), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_content_height));
-                setImageHeightAndWith(holder.iv_head, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_head_height), mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_head_with));
-                LoadImageUtil.getInstance().loadCirc(mContext, url, holder.iv_head, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.dp8));
-                setViewScale(holder, resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp15), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp36), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_ceter_text_size), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.size_21), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp38));
-                ViewGroup.LayoutParams paramsSeekbar = holder.hrStageView.getLayoutParams();
-                paramsSeekbar.width = DisplayUtils.dip2px(mContext, 15f);
-                holder.hrStageView.setLayoutParams(paramsSeekbar);
-            } else {
-                setCenterLayout(holder, resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_with), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_height), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_content_with), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_content_height));
-                setImageHeightAndWith(holder.iv_head, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_head_height), mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_head_with));
-                LoadImageUtil.getInstance().loadCirc(mContext, url, holder.iv_head, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.dp4));
-                setViewScale(holder, resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp9), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.size_21), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_ceter_text_size), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp12), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp24));
-                ViewGroup.LayoutParams paramsSeekbar = holder.hrStageView.getLayoutParams();
-                paramsSeekbar.width = DisplayUtils.dip2px(mContext, 10f);
-                holder.hrStageView.setLayoutParams(paramsSeekbar);
-            }
-
-
-            setImaveScale(holder.iv_hr, holder.iv_cal, holder.iv_point, isCard1);
-            AdapterUtil.setItemBg(holder.l_layout, Integer.parseInt(info.getPrecent()), mContext, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.dp8), holder.iv_current_stren, isCard1);
-            long currenttime = System.currentTimeMillis();
-//            Log.e("jionTime", "(currenttime - info.getJoinTime()) / 1000" + (currenttime - info.getJoinTime()) / 1000 + ",UserContans.couserTime=" + UserContans.couserTime + "CacheDataUtil.mCurrentRange=" + CacheDataUtil.mCurrentRange);
-            if (CacheDataUtil.mCurrentRange > 5) {
-                holder.tv_time.setText(TimeUtil.getHallTime(info.getJoinTime()));
-            } else {
-                if ((currenttime - info.getJoinTime()) / 1000 >= UserContans.couserTime) {
-                    holder.tv_time.setText(TimeUtil.getHallTime(currenttime - UserContans.couserTime * 1000));
+            size = mDatas.size();
+            if (holder != null) {
+                AdapterUtil.setVaule(holder.tv_cal, info, Constant.TYPE_CAL);
+                AdapterUtil.setVaule(holder.tv_hr, info, Constant.TYPE_HR);
+                AdapterUtil.setVaule(holder.tv_streng_value, info, Constant.TYPE_PERCENT);
+                holder.tv_name.setText(info.getNikeName());
+                //设置用户头像和昵称
+                if (info.getHeadUrl() == null) {
+                    url = "";
                 } else {
-                    holder.tv_time.setText(TimeUtil.getHallTime(info.getJoinTime()));
+                    url = info.getHeadUrl();
                 }
+                //设置背景
+                Timber.e("--------nfo.getUser().getJoinTime()="+info.getJoinTime()+" ");
+                boolean isCard1 = size <= 6;
+                if (isCard1) {
+                    setCenterLayout(holder, resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_with), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_height), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_content_with), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_content_height));
+                    setImageHeightAndWith(holder.iv_head, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_head_height), mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_head_with));
+                    LoadImageUtil.getInstance().loadCirc(mContext, url, holder.iv_head, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.dp8));
+                    setViewScale(holder, resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp15), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp36), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard1_ceter_text_size), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.size_21), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp38));
+                    ViewGroup.LayoutParams paramsSeekbar = holder.hrStageView.getLayoutParams();
+                    paramsSeekbar.width = DisplayUtils.dip2px(mContext, 15f);
+                    holder.hrStageView.setLayoutParams(paramsSeekbar);
+                } else {
+                    setCenterLayout(holder, resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_with), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_height), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_content_with), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_content_height));
+                    setImageHeightAndWith(holder.iv_head, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_head_height), mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_head_with));
+                    LoadImageUtil.getInstance().loadCirc(mContext, url, holder.iv_head, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.dp4));
+                    setViewScale(holder, resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp9), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.size_21), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.ncard4_ceter_text_size), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp12), resource.getDimension(com.jkcq.hrwtv.base.R.dimen.sp24));
+                    ViewGroup.LayoutParams paramsSeekbar = holder.hrStageView.getLayoutParams();
+                    paramsSeekbar.width = DisplayUtils.dip2px(mContext, 10f);
+                    holder.hrStageView.setLayoutParams(paramsSeekbar);
+                }
+
+
+                setImaveScale(holder.iv_hr, holder.iv_cal, holder.iv_point, isCard1);
+                AdapterUtil.setItemBg(holder.l_layout, Integer.parseInt(info.getPrecent()), mContext, mContext.getResources().getDimension(com.jkcq.hrwtv.base.R.dimen.dp8), holder.iv_current_stren, isCard1);
+                long currenttime = System.currentTimeMillis();
+//            Log.e("jionTime", "(currenttime - info.getJoinTime()) / 1000" + (currenttime - info.getJoinTime()) / 1000 + ",UserContans.couserTime=" + UserContans.couserTime + "CacheDataUtil.mCurrentRange=" + CacheDataUtil.mCurrentRange);
+                if (CacheDataUtil.mCurrentRange > 5) {
+                    holder.tv_time.setText(TimeUtil.getHallTime(info.getJoinTime()));
+                } else {
+                    if ((currenttime - info.getJoinTime()) / 1000 >= UserContans.couserTime) {
+                        holder.tv_time.setText(TimeUtil.getHallTime(currenttime - UserContans.couserTime * 1000));
+                    } else {
+                        holder.tv_time.setText(TimeUtil.getHallTime(info.getJoinTime()));
+                    }
+                }
+
+
+                setMatchPercent(holder, info);
+                holder.hrStageView.setToalSecend(info.getCourseTime());
+
+                Timber.e("-----------HallAdapter="+CacheDataUtil.mCurrentRange);
+
+                if (CacheDataUtil.mCurrentRange > 5) {
+                    holder.hrStageView.setValue(info.getmDatas(), false);
+                } else {
+                    holder.hrStageView.setValue(info.getmDatas(), true);
+                }
+
+                // animateItem(holder.itemView, info);
             }
 
-
-            setMatchPercent(holder, info);
-            holder.hrStageView.setToalSecend(info.getCourseTime());
-
-            Timber.e("-----------HallAdapter="+CacheDataUtil.mCurrentRange);
-
-            if (CacheDataUtil.mCurrentRange > 5) {
-                holder.hrStageView.setValue(info.getmDatas(), false);
-            } else {
-                holder.hrStageView.setValue(info.getmDatas(), true);
-            }
-
-            // animateItem(holder.itemView, info);
-        }
     }
 
     @Override

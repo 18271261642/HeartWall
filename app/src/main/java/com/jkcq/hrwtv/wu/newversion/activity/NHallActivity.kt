@@ -53,7 +53,7 @@ class NHallActivity : AbsNewHeartResultActivity(), MainActivityView {
 
     //  private var myMqttService: BaseMqttservice? = null
     private val UPDATE_HALL = 115
-    private val REMOVE_DATA = 116;
+    private val REMOVE_DATA = 116
     private val ADD_DATA = 117;
 
     private var mAddList = ConcurrentLinkedQueue<DevicesDataShowBean>()

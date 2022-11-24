@@ -85,7 +85,7 @@ class PkResultActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter
 
 //        mDataShowBeans.sort(Comparator.comparing { obj: DevicesDataShowBean -> obj.averageHeartRate }
 //            .reversed().thenComparing { obj: DevicesDataShowBean -> obj.point }.reversed())
-        mDataShowBeans.sortByDescending { it.point }
+//        mDataShowBeans.sortByDescending { it.point }
         mDataShowBeans.forEach {
             if (it.pkTeam == winTeam) {
                 data.add(PKValueEntity(it))
@@ -250,7 +250,7 @@ class PkResultActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter
     }
 
     lateinit var mCurrentHeartRateClassInfo: CourseInfo
-    fun showCourseModel() {
+    private fun showCourseModel() {
         mCurrentHeartRateClassInfo = UserContans.info
         tv_course_name.text = mCurrentHeartRateClassInfo.courseName
         tv_lever.text =
@@ -289,7 +289,7 @@ class PkResultActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter
     /**
      * 轮播点的绘制
      */
-    fun setDotView() {
+    private fun setDotView() {
         if (mTotalPage < 1) {
             return
         }
