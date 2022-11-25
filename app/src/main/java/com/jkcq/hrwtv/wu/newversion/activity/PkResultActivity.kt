@@ -25,6 +25,7 @@ import com.jkcq.hrwtv.wu.newversion.bean.PKTitleEntity
 import com.jkcq.hrwtv.wu.newversion.bean.PKValueEntity
 import kotlinx.android.synthetic.main.activity_course_sort.*
 import kotlinx.android.synthetic.main.include_head_course_sort.*
+import timber.log.Timber
 import java.util.*
 import java.util.concurrent.CopyOnWriteArrayList
 
@@ -83,13 +84,20 @@ class PkResultActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter
         }
 
 
-//        mDataShowBeans.sort(Comparator.comparing { obj: DevicesDataShowBean -> obj.averageHeartRate }
-//            .reversed().thenComparing { obj: DevicesDataShowBean -> obj.point }.reversed())
-//        mDataShowBeans.sortByDescending { it.point }
+
+        val tempWinData = mutableListOf<DevicesDataShowBean>()
         mDataShowBeans.forEach {
             if (it.pkTeam == winTeam) {
-                data.add(PKValueEntity(it))
+
+                tempWinData.add(it)
             }
+        }
+
+        tempWinData.sortWith(compareBy({it.point},{it.matchCount},{it.cal},{it.averageHeartRate},{it.averageHeartPercent}))
+
+        tempWinData.reversed().forEachIndexed { index, devicesDataShowBean ->
+            data.add(PKValueEntity(devicesDataShowBean))
+            Timber.e("-----胜利排序="+devicesDataShowBean.toString())
         }
     }
 
@@ -125,11 +133,21 @@ class PkResultActivity : BaseMVPActivity<MainActivityView, MainActivityPresenter
             )
             data.add(lowBean)
         }
+       val lowTempList = mutableListOf<DevicesDataShowBean>()
         mDataShowBeans.forEach {
             if (it.pkTeam == winTeam) {
-                data.add(PKValueEntity(it))
+
+                lowTempList.add(it)
             }
         }
+       lowTempList.sortWith(compareBy({it.point},{it.matchCount},{it.cal},{it.averageHeartRate},{it.averageHeartPercent}))
+       lowTempList.reversed().forEachIndexed { index, devicesDataShowBean ->
+           data.add(PKValueEntity(devicesDataShowBean))
+           Timber.e("------失败排序="+devicesDataShowBean.toString())
+       }
+
+
+
     }
 
     override fun initView() {
